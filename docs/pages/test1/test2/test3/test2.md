@@ -6,9 +6,9 @@ permalink: test4
 
 z3
 
-{% include section_start %}
+{% include section_start.md %}
 Ooops! I did it againrrr7
-{% include section_end %}
+{% include section_end.md %}
 
 {% highlight csharp %}
 var audit = new Audit();

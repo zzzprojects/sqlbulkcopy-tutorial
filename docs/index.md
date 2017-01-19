@@ -1,8 +1,8 @@
 ---
-layout: post
+layout: default
 ---
 
-{% include header.md %}
+
 <html lang="en">
 	<head>
 		<meta charset="utf-8">

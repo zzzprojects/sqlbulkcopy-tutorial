@@ -1,7 +1,7 @@
 ---
 layout: default
 title: My page ABC
-permalink: /test2.html
+permalink: test3.html
 ---
 
 Ooops! I did it again

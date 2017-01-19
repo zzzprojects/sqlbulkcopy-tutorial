@@ -1,6 +1,6 @@
 ---
 layout: default
-title: My page ABC
+title: My page ABC6
 permalink: test4
 ---
 

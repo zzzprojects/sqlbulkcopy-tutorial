@@ -676,4 +676,4 @@ var list = ctx.Orders.IncludeFilter(x => x.Items
 	</body>
 </html>
 
-{% include footer.md %}
+

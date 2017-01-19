@@ -1,1 +1,4 @@
-My Custom Page2
+---
+title: My page ABC
+permalink: test2.html
+---

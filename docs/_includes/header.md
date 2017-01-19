@@ -1,5 +1,5 @@
 <head>
-{{title}}
+<title>{{ page.title }}</title>
 </head>
 
 My page header6

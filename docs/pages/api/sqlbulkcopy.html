@@ -15,23 +15,27 @@ permalink: sqlbulkcopy
 	<tbody>
 		<tr>
 			<td><a href='batchsize'>BatchSize</a></td>
-			<td></td>
+			<td>Number of rows for a batch.</td>
 		</tr>
 		<tr>
 			<td><a href='bulkcopytimeout'>BulkCopyTimeout</a></td>
-			<td></td>
+			<td>Number of seconds maximum for a batch before it times out.</td>
 		</tr>
 		<tr>
 			<td><a href='columnmappings'>ColumnMappings</a></td>
-			<td></td>
+			<td>Mapping between the source and destination columns.</td>
+		</tr>
+		<tr>
+			<td><a href='destinationtablename'>DestinationTableName</a></td>
+			<td>Name of the destination table.</td>
 		</tr>
 		<tr>
 			<td><a href='enablestreaming'>EnableStreaming</a></td>
-			<td></td>
+			<td>True to enable streaming for IDataReader object.</td>
 		</tr>
 		<tr>
 			<td><a href='notifyafter'>NotifyAfter</a></td>
-			<td></td>
+			<td>Number of rows to process before raising the SqlRowsCopied events.</td>
 		</tr>
 	</tbody>
 </table>
@@ -46,11 +50,11 @@ permalink: sqlbulkcopy
 	<tbody>
 		<tr>
 			<td><a href='writetoserver'>WriteToServer</a></td>
-			<td></td>
+			<td>Copy all rows from the source to the destination table.</td>
 		</tr>
 		<tr>
 			<td><a href='writetoserverasync'>WriteToServerAsync</a></td>
-			<td></td>
+			<td>The asynchronous version of WriteToServer.</td>
 		</tr>
 	</tbody>
 </table>
@@ -65,7 +69,7 @@ permalink: sqlbulkcopy
 	<tbody>
 		<tr>
 			<td><a href='sqlrowcopied'>SqlRowsCopied</a></td>
-			<td></td>
+			<td>Even raised after the number of row in the NotifyAfter has been processed.</td>
 		</tr>
 	</tbody>
 </table>

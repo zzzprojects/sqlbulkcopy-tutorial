@@ -15,6 +15,8 @@ The method WriteToServer throw the following error:
 {% include end-block-h2.html %}
 
 {% include begin-block-h2.html title='Solution' %}
+This error is caused because to value has been set to the DestinationTableName property.
+
 {% include begin-code.html %}
 {% highlight csharp %}
 using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperations))

@@ -1,1 +1,34 @@
+---
+layout: default
+title: The DestinationTableName property must be set before calling this method.
+permalink: destinationtablename-property-must-be-set.html
+---
 
+{% include template-h1.html %}
+
+{% include begin-block-h2.html title='Problem' %}
+The method WriteToServer throw the following error:
+
+[Something Error: The DestinationTableName property must be set before calling this method.]
+
+
+{% include end-block-h2.html %}
+
+{% include begin-block-h2.html title='Solution' %}
+{% include begin-code.html %}
+{% highlight csharp %}
+using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperations))
+{
+    connection.Open();
+
+    using (var bulkCopy = new SqlBulkCopy(connection))
+    {
+        bulkCopy.ColumnMappings.Add("ColumnIntTest", "ColumnIntTest");
+        bulkCopy.ColumnMappings.Add("ColumnStringTest", "ColumnStringTest");
+
+        bulkCopy.WriteToServer(dt);
+    }
+}
+{% endhighlight %}
+{% include end-code.html %}
+{% include end-block-h2.html %}

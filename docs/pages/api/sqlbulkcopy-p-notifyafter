@@ -6,3 +6,4 @@ permalink: test4
 
 {% include template-h1.html %}
 
+Number of rows to process before raising the SqlRowsCopied events.

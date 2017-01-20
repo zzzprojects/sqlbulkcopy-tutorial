@@ -43,7 +43,7 @@
 			<article>
 {% for num in (0..site.data.permalink.size) %}
     {% assign page2 = site.data.permalink[num] %}
-    {% if page2.title == page.permalink %}
+    {% if page2.permalink == page.permalink %}
         {% assign next_i = forloop.index0 | plus: 1 %}
         {% assign prev_i = forloop.index0 | minus: 2 %}
 

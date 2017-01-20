@@ -53,13 +53,6 @@
     {% endif %}
 {% endfor %}
 
-Test: {{ page.permalink }}
-<br />
-Count: {{ site.data.permalink.size }}
-<br />
-Next: {{ site.data.permalink[next_i].permalink }}
-<br />
-Prev: {{ site.data.permalink[prev_i].permalink }}
 <nav class="pagination">
     <div class="next">
         <a href="{{ site.data.permalink[next_i].permalink }}">Next</a>

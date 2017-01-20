@@ -1,1 +1,7 @@
-<h1>{{ include.content }}</h1>
+<h1>
+{% if include.content == '' %}
+  {{ page.title }}
+{% else %}
+  {{ include.content }}
+{% endif %}
+</h1>

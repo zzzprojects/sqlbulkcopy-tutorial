@@ -19,6 +19,7 @@ If you need to INSERT 250 rows with a BatchSize of 100, 3 batchs will be sent to
 {% include begin-block-h2.html title='Example' %}
 
 {% include begin-code.html %}
+{% highlight csharp %}
 using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString))
 {
 	// SET the BatchSize.
@@ -26,6 +27,7 @@ using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString))
 	
 	// ...code...
 }
+{% endhighlight %}
 {% include end-code.html %}
 
 {% include end-block-h2.html %}

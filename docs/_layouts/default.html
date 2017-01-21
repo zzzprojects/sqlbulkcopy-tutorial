@@ -3,38 +3,109 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<meta name="msvalidate.01" content="89359D9C492A475C0061398008D105FB" />
+		
+	<!-- seo !-->
+	<meta name="description" content="TBD" />
+	<meta name="keywords" content="TBD" />
     <title>{{ page.title }}</title>
     
+	<!-- icon/css !-->
+	<link rel="icon" type="image/png" href="http://entityframework-plus.net/images/logo.png" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-  </head>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://entityframework-plus.net/css/github2.css" />
+ </head>
   <body>
 	<header>
-		<div class="container-fluid" style="min-height:50px;">
-			<div>SqlBulkCopy Tutorial</div>
+		<div class="container-fluid" style="background-color: #edf0f7;">
+			<div class="header-brand row">
+				<div class="col-sm-10">
+					<span class="header-brand-color-1">
+						<i class="fa fa-book" aria-hidden="true"></i>&nbsp;SqlBulkCopy
+					</span>
+					<span class="header-brand-color-2">
+						Tutorial
+					</span>
+				</div>
+				<div class="col-sm-2">
+					[Advertising]
+				</div>
+			</div>
 		</div>
-		<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item">
-					<a class="nav-link" href="index">Home <span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="sqlbulkcopy">API</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="examples">Examples</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="faq">FAQ</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="troubleshoothing">Troubleshooting</a>
-				</li>
-			</ul>
-		</nav>
+		<div class="sticky-top"> <!-- doesn't work yet? !-->
+			<nav class="navbar navbar-toggleable-md">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="index"><i class="fa fa-home" aria-hidden="true"></i></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="sqlbulkcopy">API</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="examples">Examples</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="faq">FAQ</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="troubleshoothing">Troubleshooting</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
 	</header>
+<style>
+.header-brand {
+	font-size: 36px;
+	padding-left: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
 
-	<div class="row">
+.header-brand-color-1 {
+	color: #2c87f0;
+}
+
+.header-brand-color-2 {
+	color: #555;
+}
+
+header .navbar {
+	background-color: #bdd6de;
+	color: #193944;
+}
+
+header .navbar {
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+header .navbar a .fa-home {
+	font-size: 24px;
+}
+header .navbar a {
+	color: #193944;
+
+}
+
+header .navbar-nav .nav-link {
+	padding-left: 1rem !important;
+	padding-right: 1rem !important;
+}
+
+header .navbar .active {
+	background-color: #193944;
+}
+
+header .navbar .active a {
+	color: #edf5fa;
+}
+</style>
+	
+
+	<div class="row" style="min-height: 800px;">
 		<div class="col-sm-2">
 			<aside>
 			</aside>
@@ -66,13 +137,26 @@
 			</article>
 		</div>
 		<div class="col-sm-3">
+			
 		</div>
 	</div>
 
-			
-	<div style="min-height: 60px; background-color: #333;">
-	</div>
-    
+	<footer>
+		<div>
+			&nbsp;Powered by .NET Bulk Operations
+		</div>
+	</footer>
+   
+<style>
+footer {
+	background-color: #bdd6de;
+	min-height: 60px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+}
+</style>
+   
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>

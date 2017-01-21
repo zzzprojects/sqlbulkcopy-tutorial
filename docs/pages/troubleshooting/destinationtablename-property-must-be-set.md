@@ -17,6 +17,8 @@ The method WriteToServer throw the following error:
 {% include end-block-h2.html %}
 
 {% include begin-block-h2.html title='Solution' %}
+This error can be caused for two reasons:
+ - 
 This error is caused because to value has been set to the DestinationTableName property.
 
 - ENSURE you specify a value to the DestinationTableName property.

@@ -1,3 +1,25 @@
 {% if page.path contains "/api/" %}
-  Hey there, Shopify employee!
+<ul class="list-group">
+	<li class="list-group-item list-group-item-info">API</li>
+	<li class="list-group-item list-group-item-action" style="font-weight: bold;">SqlBulkCopy</li>
+	<li class="list-group-item list-group-item-info">Properties</li>
+	<li class="list-group-item list-group-item-action">BatchSize</li>
+	<li class="list-group-item list-group-item-action">BulkCopyTimeout</li>
+	<li class="list-group-item list-group-item-action">ColumnMappings</li>
+	<li class="list-group-item list-group-item-action">DestinationTableName</li>
+	<li class="list-group-item list-group-item-action">EnableStreaming</li>
+	<li class="list-group-item list-group-item-action">NotifyAfter</li>
+	<li class="list-group-item list-group-item-info">Methods</li>
+	<li class="list-group-item list-group-item-action">WriteToServer</li>
+	<li class="list-group-item list-group-item-action">WrtieToServerAsync</li>
+	<li class="list-group-item list-group-item-info">Events</li>
+	<li class="list-group-item list-group-item-action">SqlRowsCopied</li>
+</ul>
 {% endif %}
+
+<style>
+.list-group-item:first-child,
+.list-group-item:last-child {
+	border-radius: 0px;
+}
+</style>

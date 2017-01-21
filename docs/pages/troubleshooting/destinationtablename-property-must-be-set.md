@@ -18,9 +18,8 @@ The method WriteToServer throw the following error:
 
 {% include begin-block-h2.html title='Solution' %}
 This error can be caused for two reasons:
-- NO
-- An empty string value has been provided to the DestinationTableName property
-This error is caused because to value has been set to the DestinationTableName property.
+- You never provided any value to the DestinationTableName property (empty by default)
+- You provided an empty string value has been provided to the DestinationTableName property
 
 - ENSURE you specify a value to the DestinationTableName property.
 - ENSURE the value specified is not empty.

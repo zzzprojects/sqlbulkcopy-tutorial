@@ -38,8 +38,8 @@ using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperat
 
     using (var bulkCopy = new SqlBulkCopy(connection))
     {
-        // ENSURE you specify a value to the DestinationTableName property.
-        // ENSURE the value specified is not empty.
+        // ENSURE the destination table name exist. Make a SELECT * FROM [TheDestinationTable] in SSMS
+        // ENSURE the user have right. Log with the user information into SSMS and make the SELECT * FROM [TheDestinationTable]
         bulkCopy.DestinationTableName = destinationName;
 
         bulkCopy.ColumnMappings.Add("TheColumnInt", "TheColumnInt");

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: SqlBulkCopy | Cannot access destination table 'TheDestinationTable'.
-permalink: destinationtablename-property-must-be-set
+permalink: cannot-access-destination-table
 ---
 
 {% include template-h1.html %}

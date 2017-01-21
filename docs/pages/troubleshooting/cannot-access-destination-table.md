@@ -18,10 +18,12 @@ The method WriteToServer throw the following error:
 
 {% include begin-block-h2.html title='Solution' %}
 
-This error can be caused for two reasons:
+This error can be caused for the following reasons:
 
-- You never provided any value to the DestinationTableName property (The default value = empty)
-- You provided an empty string value has been provided to the DestinationTableName property
+- You provided an invalid table name.
+- You provided an invalid schema name.
+- The user doesn't have right on the table name.
+- The user doesn't have right on the schema name.
 
 How to Fix
 

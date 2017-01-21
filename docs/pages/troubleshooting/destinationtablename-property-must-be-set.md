@@ -20,7 +20,7 @@ The method WriteToServer throw the following error:
 
 This error can be caused for two reasons:
 
-- You never provided any value to the DestinationTableName property (empty by default)
+- You never provided any value to the DestinationTableName property (The default value = empty)
 - You provided an empty string value has been provided to the DestinationTableName property
 
 How to Fix

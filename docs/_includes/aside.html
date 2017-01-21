@@ -15,6 +15,11 @@
 	<li class="list-group-item list-group-item-info">Events</li>
 	<li class="list-group-item list-group-item-action"><a href="sqlrowscopied">SqlRowsCopied</a></li>
 </ul>
+{% elif page.path contains "/troubleshooting/" %}
+<ul class="list-group">
+	<li class="cannot-access-destination-table">Cannot Access Destination Table</li>
+	<li class="destinationtablename-property-must-be-set" style="font-weight: bold;"><a href="sqlbulkcopy">Destination Table Name must be set</a></li>
+</ul>
 {% endif %}
 
 <style>

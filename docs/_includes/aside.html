@@ -16,11 +16,13 @@
 	<li class="list-group-item list-group-item-action"><a href="sqlrowscopied">SqlRowsCopied</a></li>
 </ul>
 
-{% elsif page.path contains "/troubleshooting/" %}
+{% elsif page.path contains "/examples/" %}
 <ul class="list-group">
-	<li class="list-group-item list-group-item-info">DestinationTableName</li>
-	<li class="list-group-item list-group-item-action" style="font-weight: bold;"><a href="cannot-access-destination-table">Cannot Access Destination Table</a></li>
-	<li class="list-group-item list-group-item-action"><a href="destinationtablename-property-must-be-set">Destination Table Name must be set</a></li>
+	<li class="list-group-item list-group-item-info">Examples</li>
+	<li class="list-group-item list-group-item-action"><a href="oracle">C# Examples</a></li>
+	<li class="list-group-item list-group-item-action"><a href="sql-compact">VB.NET Examples</a></li>
+	<li class="list-group-item list-group-item-info">Transaction</li>
+	<li class="list-group-item list-group-item-action"><a href="sqlite">TBD</a></li>
 </ul>
 
 {% elsif page.path contains "/faq/" %}
@@ -32,6 +34,14 @@
 	<li class="list-group-item list-group-item-action"><a href="sqlite">SQLite</a></li>
 	<li class="list-group-item list-group-item-action"><a href="postgresql">PostgreSQL</a></li>
 </ul>
+
+{% elsif page.path contains "/troubleshooting/" %}
+<ul class="list-group">
+	<li class="list-group-item list-group-item-info">DestinationTableName</li>
+	<li class="list-group-item list-group-item-action" style="font-weight: bold;"><a href="cannot-access-destination-table">Cannot Access Destination Table</a></li>
+	<li class="list-group-item list-group-item-action"><a href="destinationtablename-property-must-be-set">Destination Table Name must be set</a></li>
+</ul>
+
 {% endif %}
 
 <style>

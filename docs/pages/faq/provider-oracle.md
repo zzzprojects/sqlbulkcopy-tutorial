@@ -1,7 +1,7 @@
 ---
 layout: default
 title: SqlBulkCopy - Oracle
-permalink: faq
+permalink: sqlbulkcopy-oracle
 ---
 
 {% include template-h1.html %}

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: SqlBulkCopy: Troublshooting
-permalink: troubleshooting2
+title: SqlBulkCopy - Troublshooting
+permalink: troubleshooting
 ---
 
 {% include template-h1.html %}

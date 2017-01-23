@@ -12,7 +12,7 @@ permalink: destinationtablename-property-must-be-set
   </div>
      <div class="card-block">
 {% include template-execute-thrown.html methodName='WriteToServer' %}
-
+<br />
 {% include template-exception.html message='The DestinationTableName property must be set before calling this method.' %}
      </div>
 </div>

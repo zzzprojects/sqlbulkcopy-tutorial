@@ -10,16 +10,16 @@ permalink: destinationtablename-property-must-be-set
   <div class="card-header">
      <h2>Problem</h2>
   </div>
-</div>
-
-<div class="card">
-  <div class="card-header">
-     <h2>Solution</h2>
      <div class="card-block">
 {% include template-execute-thrown.html methodName='WriteToServer' %}
 
 {% include template-exception.html message='The DestinationTableName property must be set before calling this method.' %}
      </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+     <h2>Solution</h2>
   </div>
   <div class="card-block">
      <h3 class="card-title">Cause</h3>

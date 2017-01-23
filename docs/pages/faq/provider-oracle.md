@@ -7,7 +7,8 @@ permalink: oracle
 {% include template-h1.html %}
 
 {% include begin-block-h2.html title='Problem' %}
-You use one of the following providers:
+
+You want to use something similar to SqlBulkCopy in the following provider:
 
 - Oracle.DataAccess
 - Oracle.ManagedDataAccess

@@ -10,7 +10,7 @@ permalink: oracle
 
 Unfortunately, SqlBulkCopy doesn't support Oracle.
 
-You want to know what's the **fastest way to insert** using:
+But you want to know what's the **fastest way to insert** using:
 
 - Oracle.DataAccess
 - Oracle.ManagedDataAccess

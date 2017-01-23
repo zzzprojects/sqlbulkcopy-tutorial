@@ -8,13 +8,13 @@ permalink: oracle
 
 {% include begin-block-h2.html title='Problem' %}
 
-You want to use something similar to SqlBulkCopy in the following provider:
+Unfortunately, SqlBulkCopy doesn't support Oracle.
+
+You want to know what's the **fastest way to insert** using:
 
 - Oracle.DataAccess
 - Oracle.ManagedDataAccess
 - Devart.Data.Oracle
-
-and you want to use SqlBulkCopy.
 
 {% include begin-block-h2.html title='Solution' %}
 SqlBulkCopy is not available for Oracle. However, you can use one of these class:

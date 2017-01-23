@@ -8,9 +8,7 @@ permalink: destinationtablename-property-must-be-set
 
 {% include begin-block-h2.html title='Problem' %}
 
-<p>
-The method WriteToServer throw the following error:
-</p>
+{% include template-execute-thrown.html methodName='WriteToServer' %}
 
 {% include template-exception.html message='The DestinationTableName property must be set before calling this method.' %}
 

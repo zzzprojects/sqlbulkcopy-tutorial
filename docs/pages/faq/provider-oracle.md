@@ -54,36 +54,13 @@ Under the hood, the OracleLoader use the OracleBulkCopy. So for the same reason,
 {% include end-block-h2.html %}
 
 {% include begin-block-h2.html title='Solution - .NET Bulk Operations with Oracle' %}
-{% include end-block-h2.html %}
 
-
-
-
-{:target="_blank"}
-SqlBulkCopy is not available for Oracle. However, you can use one of these class:
-
-
-
-Nothing is available for Oracle.ManagedDataAccess....
-
-But before using it, wait!!!
-
-WE DON'T RECOMMAND USING OracleBulkCopy && OracleLoader
-
-Both of these class are limited
-
-Limitation: https://docs.oracle.com/cd/E51173_01/win.122/e17732/featBulkCopy.htm#ODPNT213
-
-So what else?
-
-We recommand using instead Array insert.
-
-{% include begin-block-h2.html title='Alternative Solution' %}
-One alternative solution is using [.NET Bulk Operations](http://bulk-operations.net/) which support all oracle provider:
+The .NET Bulk Operations use under the hood the Array Bindings solution and support all Oracle provider:
 
 - Oracle.DataAccess
 - Oracle.ManagedDataAccess
 - Devart.Data.Oracle
+
 
 and all kind of bulk operations:
 - BulkInsert
@@ -111,3 +88,30 @@ bulk.BulkMerge(customers);
 
 {% endhighlight %}
 {% include end-code.html %}
+
+{% include end-block-h2.html %}
+
+
+
+
+{:target="_blank"}
+SqlBulkCopy is not available for Oracle. However, you can use one of these class:
+
+
+
+Nothing is available for Oracle.ManagedDataAccess....
+
+But before using it, wait!!!
+
+WE DON'T RECOMMAND USING OracleBulkCopy && OracleLoader
+
+Both of these class are limited
+
+Limitation: https://docs.oracle.com/cd/E51173_01/win.122/e17732/featBulkCopy.htm#ODPNT213
+
+So what else?
+
+We recommand using instead Array insert.
+
+{% include begin-block-h2.html title='Alternative Solution' %}
+

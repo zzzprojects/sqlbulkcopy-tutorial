@@ -26,9 +26,11 @@ You can use one of the following solution
 
 
 {% include begin-block-h2.html title='Solution - OracleBulkCopy' %}
+(https://docs.oracle.com/cd/E17666_01/doc/win.112/e17357/OracleBulkCopyClass.htm)
 {% include end-block-h2.html %}
 
 {% include begin-block-h2.html title='Solution - OracleLoader' %}
+(http://www.devart.com/dotconnect/oracle/docs/?Devart.Data.Oracle~Devart.Data.Oracle.OracleLoader.html)
 {% include end-block-h2.html %}
 
 {% include begin-block-h2.html title='Solution - Array Bindings' %}
@@ -38,8 +40,8 @@ You can use one of the following solution
 {% include end-block-h2.html %}
 
 
-(https://docs.oracle.com/cd/E17666_01/doc/win.112/e17357/OracleBulkCopyClass.htm)
-(http://www.devart.com/dotconnect/oracle/docs/?Devart.Data.Oracle~Devart.Data.Oracle.OracleLoader.html)
+
+
 {:target="_blank"}
 SqlBulkCopy is not available for Oracle. However, you can use one of these class:
 

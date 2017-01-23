@@ -25,6 +25,19 @@ You can use one of the following solution
 - [.NET Bulk Operations](solution-net-bulk-operations)
 
 
+{% include begin-block-h2.html title='Solution - OracleBulkCopy' %}
+{% include end-block-h2.html %}
+
+{% include begin-block-h2.html title='Solution - OracleLoader' %}
+{% include end-block-h2.html %}
+
+{% include begin-block-h2.html title='Solution - Array Bindings' %}
+{% include end-block-h2.html %}
+
+{% include begin-block-h2.html title='Solution - .NET Bulk Operations with Oracle' %}
+{% include end-block-h2.html %}
+
+
 (https://docs.oracle.com/cd/E17666_01/doc/win.112/e17357/OracleBulkCopyClass.htm)
 (http://www.devart.com/dotconnect/oracle/docs/?Devart.Data.Oracle~Devart.Data.Oracle.OracleLoader.html)
 {:target="_blank"}

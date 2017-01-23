@@ -8,7 +8,7 @@ permalink: destinationtablename-property-must-be-set
 
 <div class="card">
   <div class="card-header">
-     <h2 style="margin-top: 0px; margin-bottom: 0px;">Problem</h2>
+     <h2 style="margin-top: 0px; margin-bottom: 0px;">Problem2</h2>
   </div>
      <div class="card-block">
 {% include template-execute-thrown.html methodName='WriteToServer' %}

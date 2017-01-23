@@ -17,7 +17,7 @@ permalink: cannot-access-destination-table
 
 {% include begin-block-h2.html title='Solution' %}
 
-This error can be caused for the following reasons:
+{% include template-exception-cause.html %}
 
 - You provided an invalid table name.
 - You provided an invalid schema name.

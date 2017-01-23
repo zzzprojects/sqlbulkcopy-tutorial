@@ -17,10 +17,17 @@ But you still want to know what's the **fastest way to insert** using:
 - [Devart.Data.Oracle](https://www.devart.com/dotconnect/oracle/){:target="_blank"}
 
 {% include begin-block-h2.html title='Solution' %}
-SqlBulkCopy is not available for Oracle. However, you can use one of these class:
+You can use one of the following solution
 
 - [OracleBulkCopy](https://docs.oracle.com/cd/E17666_01/doc/win.112/e17357/OracleBulkCopyClass.htm){:target="_blank"} for Oracle.DataAccess
 - [OracleLoader](http://www.devart.com/dotconnect/oracle/docs/?Devart.Data.Oracle~Devart.Data.Oracle.OracleLoader.html){:target="_blank"} for Devart.Data.Oracle
+- Array Bindings
+- .NET Bulk Operations
+
+
+SqlBulkCopy is not available for Oracle. However, you can use one of these class:
+
+
 
 Nothing is available for Oracle.ManagedDataAccess....
 

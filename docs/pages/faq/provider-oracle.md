@@ -27,10 +27,23 @@ You can use one of the following solution
 
 {% include begin-block-h2.html title='Solution - OracleBulkCopy' %}
 (https://docs.oracle.com/cd/E17666_01/doc/win.112/e17357/OracleBulkCopyClass.htm)
+
+We highly doesn't recommended this solution, so no example will be provided.
+
+Limitation:
+
+- DO NOT support Oracle.ManagedDataAccess
+- DO NOT support all column types
+- DO NOT check constraints
+- DO NOT check triggers
+
 {% include end-block-h2.html %}
 
 {% include begin-block-h2.html title='Solution - OracleLoader' %}
-(http://www.devart.com/dotconnect/oracle/docs/?Devart.Data.Oracle~Devart.Data.Oracle.OracleLoader.html)
+Documentation: (http://www.devart.com/dotconnect/oracle/docs/?Devart.Data.Oracle~Devart.Data.Oracle.OracleLoader.html)
+
+Under the hood, the OracleLoader use the OracleBulkCopy. So for the same reason, we don't recommended this solution.
+
 {% include end-block-h2.html %}
 
 {% include begin-block-h2.html title='Solution - Array Bindings' %}

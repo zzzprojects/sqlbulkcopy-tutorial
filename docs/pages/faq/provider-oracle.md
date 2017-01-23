@@ -26,9 +26,9 @@ You can use one of the following solution
 
 
 {% include begin-block-h2.html title='Solution - OracleBulkCopy' %}
-(https://docs.oracle.com/cd/E17666_01/doc/win.112/e17357/OracleBulkCopyClass.htm)
+Documentation: https://docs.oracle.com/cd/E17666_01/doc/win.112/e17357/OracleBulkCopyClass.htm
 
-We highly doesn't recommended this solution, so no example will be provided.
+This solution is very fast, however we doesn't recommend it.
 
 Limitation:
 
@@ -37,10 +37,14 @@ Limitation:
 - DO NOT check constraints
 - DO NOT check triggers
 
+And there is more issue undocumented...
+
+This solution is simply not as flexible as the Array Bindings solution.
+
 {% include end-block-h2.html %}
 
 {% include begin-block-h2.html title='Solution - OracleLoader' %}
-Documentation: (http://www.devart.com/dotconnect/oracle/docs/?Devart.Data.Oracle~Devart.Data.Oracle.OracleLoader.html)
+Documentation: http://www.devart.com/dotconnect/oracle/docs/?Devart.Data.Oracle~Devart.Data.Oracle.OracleLoader.html
 
 Under the hood, the OracleLoader use the OracleBulkCopy. So for the same reason, we don't recommended this solution.
 

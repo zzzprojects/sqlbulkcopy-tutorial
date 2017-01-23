@@ -1,6 +1,6 @@
 ---
 layout: default
-title: SqlBulkCopy: The DestinationTableName property must be set before calling this method.
+title: SqlBulkCopy - The DestinationTableName property must be set before calling this method.
 permalink: destinationtablename-property-must-be-set
 ---
 

@@ -16,7 +16,7 @@ permalink: destinationtablename-property-must-be-set
 
 {% include begin-block-h2.html title='Solution' %}
 
-This error can be caused for two reasons:
+{% include template-exception-cause.html %}
 
 - You never provided any value to the DestinationTableName property (The default value = empty)
 - You provided an empty string value has been provided to the DestinationTableName property

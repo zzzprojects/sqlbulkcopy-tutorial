@@ -9,9 +9,7 @@ permalink: value-cannot-be-null
 
 {% include begin-block-h2.html title='Problem' %}
 
-<p>
-The method WriteToServer throw the following error:
-</p>
+{% include template-execute-thrown.html methodName='WriteToServer' %}
 
 {% include template-exception.html message='Value cannot be null.' %}
 

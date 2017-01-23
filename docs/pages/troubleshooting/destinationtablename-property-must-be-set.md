@@ -17,9 +17,9 @@ permalink: destinationtablename-property-must-be-set
      </div>
 </div>
 
-<br />
+<br /><br />
 <hr>
-<br />
+<br /><br />
 
 <div class="card">
   <div class="card-header">

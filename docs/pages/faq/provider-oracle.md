@@ -21,7 +21,7 @@ SqlBulkCopy is not available for Oracle. However, you can use one of these class
 - [OracleBulkCopy](https://docs.oracle.com/cd/E17666_01/doc/win.112/e17357/OracleBulkCopyClass.htm) for Oracle.DataAccess
 - [OracleLoader](http://www.devart.com/dotconnect/oracle/docs/?Devart.Data.Oracle~Devart.Data.Oracle.OracleLoader.html) for Devart.Data.Oracle
 
-Nothing is available for Oracle.ManagedDataAccess.
+Nothing is available for Oracle.ManagedDataAccess....
 
 But before using it, wait!!!
 

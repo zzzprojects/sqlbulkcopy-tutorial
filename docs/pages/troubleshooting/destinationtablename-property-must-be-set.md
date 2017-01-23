@@ -29,16 +29,16 @@ permalink: destinationtablename-property-must-be-set
      <h3 class="card-title">Cause</h3>
 This error can be caused for the following reasons:
 
-- You never provided any value to the DestinationTableName property (The default value = empty)
-- You provided an empty string value has been provided to the DestinationTableName property
+-You never provided any value to the DestinationTableName property (The default value = empty)
+-You provided an empty string value has been provided to the DestinationTableName property
 
   </div>
   <div class="card-block">
      <h3 class="card-title">Fix</h3>
 The fix:
 
-- ENSURE the destination table name exist. Make a SELECT * FROM [TheDestinationTable] in SSMS
-- ENSURE the user have right. Log with the user information into SSMS and make the SELECT * FROM [TheDestinationTable]
+-ENSURE the destination table name exist. Make a SELECT * FROM [TheDestinationTable] in SSMS
+-ENSURE the user have right. Log with the user information into SSMS and make the SELECT * FROM [TheDestinationTable]
 
   </div>
   

@@ -17,12 +17,9 @@ permalink: value-cannot-be-null
 
 {% include begin-block-h2.html title='Solution' %}
 
-This error can be caused for the following reasons:
+{% include template-exception-cause.html %}
 
-- You provided an invalid table name.
-- You provided an invalid schema name.
-- The user doesn't have right on the table name.
-- The user doesn't have right on the schema name.
+- The provided value for the DestinationTableName is null.
 
 How to Fix
 

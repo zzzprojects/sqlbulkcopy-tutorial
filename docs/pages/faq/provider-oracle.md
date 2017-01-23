@@ -14,7 +14,7 @@ But you still want to know what's the **fastest way to insert** using:
 
 - Oracle.DataAccess
 - Oracle.ManagedDataAccess
-- [Devart.Data.Oracle](https://www.devart.com/dotconnect/oracle/)
+- [Devart.Data.Oracle](https://www.devart.com/dotconnect/oracle/){:target="_blank"}
 
 {% include begin-block-h2.html title='Solution' %}
 SqlBulkCopy is not available for Oracle. However, you can use one of these class:

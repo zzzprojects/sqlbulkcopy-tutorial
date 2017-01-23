@@ -1,6 +1,6 @@
 ---
 layout: default
-title: SqlBulkCopy: Value cannot be null.
+title: SqlBulkCopy - Value cannot be null.
 permalink: value-cannot-be-null
 ---
 

@@ -19,8 +19,8 @@ But you still want to know what's the **fastest way to insert** using:
 {% include begin-block-h2.html title='Solution' %}
 You can use one of the following solution
 
-- [OracleBulkCopy](https://docs.oracle.com/cd/E17666_01/doc/win.112/e17357/OracleBulkCopyClass.htm){:target="_blank"} for Oracle.DataAccess
-- [OracleLoader](http://www.devart.com/dotconnect/oracle/docs/?Devart.Data.Oracle~Devart.Data.Oracle.OracleLoader.html){:target="_blank"} for Devart.Data.Oracle
+- [OracleBulkCopy](https://docs.oracle.com/cd/E17666_01/doc/win.112/e17357/OracleBulkCopyClass.htm){:target="_blank"}
+- [OracleLoader](http://www.devart.com/dotconnect/oracle/docs/?Devart.Data.Oracle~Devart.Data.Oracle.OracleLoader.html){:target="_blank"}
 - Array Bindings
 - .NET Bulk Operations
 

@@ -19,12 +19,15 @@ But you still want to know what's the **fastest way to insert** using:
 {% include begin-block-h2.html title='Solution' %}
 You can use one of the following solution
 
-- [OracleBulkCopy](https://docs.oracle.com/cd/E17666_01/doc/win.112/e17357/OracleBulkCopyClass.htm){:target="_blank"} _(NOT Recommended)_
-- [OracleLoader](http://www.devart.com/dotconnect/oracle/docs/?Devart.Data.Oracle~Devart.Data.Oracle.OracleLoader.html){:target="_blank"} _(NOT Recommended)_
-- Array Bindings
-- .NET Bulk Operations
+- [OracleBulkCopy](solution-oraclebulkcopy) _(NOT Recommended)_
+- [OracleLoader](solution-oracleloader) _(NOT Recommended)_
+- [Array Bindings](solution-array-bindings)
+- [.NET Bulk Operations](solution-net-bulk-operations)
 
 
+(https://docs.oracle.com/cd/E17666_01/doc/win.112/e17357/OracleBulkCopyClass.htm)
+(http://www.devart.com/dotconnect/oracle/docs/?Devart.Data.Oracle~Devart.Data.Oracle.OracleLoader.html)
+{:target="_blank"}
 SqlBulkCopy is not available for Oracle. However, you can use one of these class:
 
 

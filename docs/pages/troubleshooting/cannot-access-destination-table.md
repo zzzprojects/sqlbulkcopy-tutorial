@@ -45,4 +45,5 @@ using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperat
 - ENSURE the table name is valid.
 
 If the schema and table name was already valid and you still have the error:
+
 - LOG into SSMS with the user/password used by the application and perform a SELECT statement to ensure he has access to it.

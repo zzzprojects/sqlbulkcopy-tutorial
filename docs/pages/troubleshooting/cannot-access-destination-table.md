@@ -1,6 +1,6 @@
 ---
 layout: default
-title: SqlBulkCopy - Cannot access destination table
+title: SqlBulkCopy - Cannot access destination table '[TheInvalidTableName]'.
 permalink: cannot-access-destination-table
 ---
 

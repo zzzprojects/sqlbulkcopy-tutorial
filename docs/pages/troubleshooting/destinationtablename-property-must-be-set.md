@@ -24,7 +24,6 @@ using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperat
     using (var bulkCopy = new SqlBulkCopy(connection))
     {
         bulkCopy.DestinationTableName = destinationName;
-
         bulkCopy.WriteToServer(dt);
     }
 }

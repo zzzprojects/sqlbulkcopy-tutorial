@@ -13,25 +13,10 @@ permalink: cannot-access-destination-table
 
 {% include template-exception.html message='Cannot access destination table \'TheDestinationTable\'.' %}
 
-{% include end-block-h2.html %}
-
-## Solution
-
-### Cause
-
-- You provided an invalid table name.
-- You provided an invalid schema name.
-- The user doesn't have right on the table name.
-- The user doesn't have right on the schema name.
-
-How to Fix
-
-- ENSURE you specify a value to the DestinationTableName property.
-- ENSURE the value specified is not empty.
-
-{% include begin-code.html %}
+### Example
 {% highlight csharp %}
-string destinationName = "TheDestinationTable";
+// Oops! The used destination name doesn't exists
+string destinationName = "TheInvalidDestinationTable";
 
 using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperations))
 {
@@ -50,5 +35,26 @@ using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperat
     }
 }
 {% endhighlight %}
+
+## Solution
+
+### Cause
+
+- You provided an invalid table name.
+- You provided an invalid schema name.
+- The user doesn't have right on the table name.
+- The user doesn't have right on the schema name.
+
+### Fix
+
+- ENSURE you specify a value to the DestinationTableName property.
+- ENSURE the value specified is not empty.
+
+### Example
+{% highlight csharp %}
+// ENSURE you specify a value to the DestinationTableName property.
+// ENSURE the value specified is not empty.
+bulkCopy.DestinationTableName = destinationName;
+{% endhighlight %}
 {% include end-code.html %}
-{% include end-block-h2.html %}
+

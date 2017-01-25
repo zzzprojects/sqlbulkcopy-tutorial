@@ -56,5 +56,3 @@ using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperat
 // ENSURE the value specified is not empty.
 bulkCopy.DestinationTableName = destinationName;
 {% endhighlight %}
-{% include end-code.html %}
-

@@ -7,7 +7,7 @@ permalink: cannot-access-destination-table
 
 {% include template-h1.html %}
 
-{% include begin-block-h2.html title='Problem' %}
+## Problem
 
 {% include template-execute-thrown.html methodName='WriteToServer' %}
 
@@ -15,9 +15,9 @@ permalink: cannot-access-destination-table
 
 {% include end-block-h2.html %}
 
-{% include begin-block-h2.html title='Solution' %}
+## Solution
 
-{% include template-exception-cause.html %}
+### Cause
 
 - You provided an invalid table name.
 - You provided an invalid schema name.

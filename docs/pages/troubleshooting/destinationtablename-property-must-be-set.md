@@ -6,8 +6,6 @@ permalink: destinationtablename-property-must-be-set
 
 {% include template-h1.html %}
 
-{% include template-h1.html %}
-
 ## Problem
 
 {% include template-execute-thrown.html methodName='WriteToServer' %}

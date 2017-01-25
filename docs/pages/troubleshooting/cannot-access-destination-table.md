@@ -36,8 +36,8 @@ using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperat
 
 - You provided an invalid schema name.
 - You provided an invalid table name.
-- The user doesn't have right on the schema name.
-- The user doesn't have right on the table name.
+- The user doesn't have the right to the schema name.
+- The user doesn't have the right to the table name.
 
 ### Fix
 

@@ -38,5 +38,5 @@ using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperat
 
 ### Fix
 
-- ENSURE you provide a value to the DestinationTableName property.
+- ENSURE you provide value to the DestinationTableName property.
 - ENSURE the value you provided is not empty.

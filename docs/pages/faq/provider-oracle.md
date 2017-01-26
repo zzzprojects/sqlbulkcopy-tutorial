@@ -19,10 +19,10 @@ But you still want to know what's the **fastest way to insert** in Oracle using 
 ## Solution
 Proposed solution:
 
-- [OracleBulkCopy](solution-oraclebulkcopy) _(Not recommended)_
-- [OracleLoader](solution-oracleloader) _(Not recommended)_
-- [Array Bindings](solution-array-bindings)
-- [.NET Bulk Operations](solution-net-bulk-operations)
+- [OracleBulkCopy](solution---oraclebulkcopy) _(Not recommended)_
+- [OracleLoader](solution---oracleloader) _(Not recommended)_
+- [Array Bindings](solution---array-bindings)
+- [.NET Bulk Operations](solution---net-bulk-operations-with-oracle)
 
 
 ## Solution - OracleBulkCopy
@@ -30,7 +30,7 @@ Documentation: https://docs.oracle.com/cd/E17666_01/doc/win.112/e17357/OracleBul
 
 This solution only support the provider Oracle.DataAccess.
 
-Due to the limitation, unflexibility, and by experience! We highly recommand you to use the **Array Bindings solution** over OracleBulkCopy.
+Due to the limitation, unflexibility, and by experience! We highly recommand you to use the [Array Bindings solution]((solution---array-bindings)) over OracleBulkCopy.
 
 Limitation:
 

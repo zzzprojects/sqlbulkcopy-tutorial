@@ -38,7 +38,7 @@ using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperat
 
 ### Fix
 
-- INCREASE the bulkCopyTimeout
-- DECREASE the batchSize
+- INCREASE the BulkCopyTimeout value (default = 30s).
+- DECREASE the BatchSize value (default = unlimited).
 
 > The bulkCopyTimeout is by batch, not for the whole bulk operation.

@@ -35,7 +35,7 @@ using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperat
 
 ### Cause
 
-- You didn't provided any ColumnMappings, there is more column in the source than in the destination.
+- You didn't provided any ColumnMappings, there is more columns in the source than in the destination.
 - You provided an invalid column name for the source.
 - You provided an invalid column name for the destination.
 

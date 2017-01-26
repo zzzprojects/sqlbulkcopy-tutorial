@@ -28,7 +28,8 @@ You can use one of the following solution
 ## Solution - OracleBulkCopy
 Documentation: https://docs.oracle.com/cd/E17666_01/doc/win.112/e17357/OracleBulkCopyClass.htm
 
-This solution is very fast, however we doesn't recommend it.
+
+This solution only work for Oracle.DataAccess but contains a lot of limitation. We do not recommend using thi
 
 Limitation:
 
@@ -45,7 +46,9 @@ This solution is simply not as flexible as the Array Bindings solution.
 ## Solution - OracleLoader
 Documentation: http://www.devart.com/dotconnect/oracle/docs/?Devart.Data.Oracle~Devart.Data.Oracle.OracleLoader.html
 
-Under the hood, the OracleLoader use the OracleBulkCopy. So for the same reason, we don't recommended this solution.
+This solution only support the provider Devart.Data.Oracle.
+
+Under the hood, the OracleLoader use the OracleBulkCopy. So for the same limitation reason, we recommend using Array Binding over this solution.
 
 ## Solution - Array Bindings
 

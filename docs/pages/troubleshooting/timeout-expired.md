@@ -1,6 +1,6 @@
 ---
 layout: default
-title: SqlBulkCopy - Timeout Expired.
+title: SqlBulkCopy - Execution Timeout Expired. The timeout period elapsed prior to completion of the operation or the server is not responding.
 permalink: timeout-expired
 ---
 
@@ -10,12 +10,12 @@ permalink: timeout-expired
 
 {% include template-execute-thrown.html methodName='WriteToServer' %}
 
-{% include template-exception.html message='Value cannot be null.' %}
+{% include template-exception.html message='Execution Timeout Expired. The timeout period elapsed prior to completion of the operation or the server is not responding.' %}
 
 ### Example
 {% highlight csharp %}
-// Oops! The destination name is null
-string destinationName = null;
+// Oops! The specified timeout may be a little bit to low!
+bulkCopyTimeout = 1;
 
 using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperations))
 {
@@ -23,6 +23,7 @@ using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperat
 
     using (var bulkCopy = new SqlBulkCopy(connection))
     {
+        bulkCopy.BulkCopyTimeout = bulkCopyTimeout;
         bulkCopy.DestinationTableName = destinationName;
         bulkCopy.WriteToServer(dt);
     }
@@ -33,8 +34,11 @@ using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperat
 
 ### Cause
 
-- You provided a null value to the DestinationTableName property.
+- The bulk
 
 ### Fix
 
-- ENSURE the value you provided is not null.
+- INCREASE the bulkCopyTimeout
+- DECREASE the batchSize
+
+> The bulkCopyTimeout is by batch, not for the whole bulk operation.

@@ -14,8 +14,15 @@ permalink: type-a-cannot-be-converted-to-type-b
 
 ### Example
 {% highlight csharp %}
-// Oops! The destination name is null
-string destinationName = null;
+var dt = new DataTable();
+dt.Columns.Add("TheColumnInt");
+dt.Columns.Add("TheColumnString");
+
+for (int i = 0; i < 100; i++)
+{
+    // Oops! The value added for "TheColumnInt" is empty
+    dt.Rows.Add("", i);
+}
 
 using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperations))
 {
@@ -23,7 +30,11 @@ using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperat
 
     using (var bulkCopy = new SqlBulkCopy(connection))
     {
-        bulkCopy.DestinationTableName = destinationName;
+        bulkCopy.ColumnMappings.Add("TheColumnInt", "TheColumnInt");
+        bulkCopy.ColumnMappings.Add("TheColumnString", "TheColumnString");
+
+        bulkCopy.BatchSize = 4000;
+        bulkCopy.DestinationTableName = "TheDestinationTable";
         bulkCopy.WriteToServer(dt);
     }
 }

@@ -14,17 +14,20 @@ permalink: writetoserver-requires-an-open-and-available-connection
 
 ### Example
 {% highlight csharp %}
-// Oops! The table name is invalid
-string destinationName = "[TheInvalidTableName]";
-
 using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperations))
 {
-    connection.Open();
+    // Oops! The connection has never been opened
+    // connection.Open();
 
-    using (var bulkCopy = new SqlBulkCopy(connection))
+    foreach (DataTable dt in ds.Tables)
     {
-        bulkCopy.DestinationTableName = destinationName;
-        bulkCopy.WriteToServer(dt);
+        using (var bulkCopy = new SqlBulkCopy(connection))
+        {
+
+            bulkCopy.BatchSize = 4000;
+            bulkCopy.DestinationTableName = "TheDestinationTable";
+            bulkCopy.WriteToServer(dt);
+        }
     }
 }
 {% endhighlight %}
@@ -33,16 +36,9 @@ using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperat
 
 ### Cause
 
-- You provided an invalid schema name.
-- You provided an invalid table name.
-- The user doesn't have the right to the schema name.
-- The user doesn't have the right to the table name.
+- The connection is closed
+
 
 ### Fix
 
-- ENSURE the schema name is valid.
-- ENSURE the table name is valid.
-
-If the schema and table name was already valid:
-
-- LOG into SSMS with the user/password used by the application and perform a SELECT statement to ensure he has access to it.
+- ENSURE to open the connection

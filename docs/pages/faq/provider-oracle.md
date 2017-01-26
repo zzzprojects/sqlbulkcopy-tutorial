@@ -6,7 +6,7 @@ permalink: oracle
 
 {% include template-h1.html %}
 
-{% include begin-block-h2.html title='Problem' %}
+## Problem
 
 Unfortunately, SqlBulkCopy doesn't support Oracle.
 
@@ -16,7 +16,7 @@ But you still want to know what's the **fastest way to insert** using:
 - Oracle.ManagedDataAccess
 - [Devart.Data.Oracle](https://www.devart.com/dotconnect/oracle/){:target="_blank"}
 
-{% include begin-block-h2.html title='Solution' %}
+## Solution
 You can use one of the following solution
 
 - [OracleBulkCopy](solution-oraclebulkcopy) _(NOT Recommended)_
@@ -25,7 +25,7 @@ You can use one of the following solution
 - [.NET Bulk Operations](solution-net-bulk-operations)
 
 
-{% include begin-block-h2.html title='Solution - OracleBulkCopy' %}
+## Solution - OracleBulkCopy
 Documentation: https://docs.oracle.com/cd/E17666_01/doc/win.112/e17357/OracleBulkCopyClass.htm
 
 This solution is very fast, however we doesn't recommend it.
@@ -41,19 +41,15 @@ And there is more issue undocumented...
 
 This solution is simply not as flexible as the Array Bindings solution.
 
-{% include end-block-h2.html %}
 
-{% include begin-block-h2.html title='Solution - OracleLoader' %}
+## Solution - OracleLoader
 Documentation: http://www.devart.com/dotconnect/oracle/docs/?Devart.Data.Oracle~Devart.Data.Oracle.OracleLoader.html
 
 Under the hood, the OracleLoader use the OracleBulkCopy. So for the same reason, we don't recommended this solution.
 
-{% include end-block-h2.html %}
+## Solution - Array Bindings
 
-{% include begin-block-h2.html title='Solution - Array Bindings' %}
-{% include end-block-h2.html %}
-
-{% include begin-block-h2.html title='Solution - .NET Bulk Operations with Oracle' %}
+## Solution - .NET Bulk Operations with Oracle
 
 The .NET Bulk Operations use under the hood the Array Bindings solution and support all Oracle provider:
 
@@ -68,7 +64,6 @@ and all kind of bulk operations:
 - BulkDelete
 - BulkMerge
 
-{% include begin-code.html %}
 {% highlight csharp %}
 
 // Easy to use
@@ -87,10 +82,6 @@ bulk.ColumnPrimaryKeyExpression = c => c.Code;
 bulk.BulkMerge(customers);
 
 {% endhighlight %}
-{% include end-code.html %}
-
-{% include end-block-h2.html %}
-
 
 
 

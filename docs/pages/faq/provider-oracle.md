@@ -42,6 +42,24 @@ Limitation:
 - CANNOT perform INSERT RETURNING statement
 - And a lot of more problem...
 
+### Example
+
+{% highlight csharp %}
+using (var connection = new OracleConnection(My.Config.ConnectionStrings.OracleBulkOperations))
+{
+    connection.Open();
+
+    using (var bulk = new OracleBulkCopy(connection))
+    {
+        bulk.ColumnMappings.Add("TheColumnInt", "THECOLUMNINT");
+        bulk.ColumnMappings.Add("TheColumnString", "THECOLUMNSTRING");
+        bulk.DestinationTableName = "THEDESTINATIONTABLE";
+
+        bulk.WriteToServer(dt);
+    }
+}
+{% endhighlight %}
+
 ## Solution - OracleLoader
 Documentation: http://www.devart.com/dotconnect/oracle/docs/?Devart.Data.Oracle~Devart.Data.Oracle.OracleLoader.html
 

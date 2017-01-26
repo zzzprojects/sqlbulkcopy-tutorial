@@ -39,8 +39,7 @@ Limitation:
 - DO NOT check constraints
 - DO NOT check triggers
 - CANNOT perform INSERT RETURNING statement
-
-> Once you start using Array Bindings, you never look back at this solution.
+- And a lot of more problem...
 
 ## Solution - OracleLoader
 Documentation: http://www.devart.com/dotconnect/oracle/docs/?Devart.Data.Oracle~Devart.Data.Oracle.OracleLoader.html

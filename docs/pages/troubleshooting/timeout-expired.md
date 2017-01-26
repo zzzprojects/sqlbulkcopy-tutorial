@@ -34,7 +34,7 @@ using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperat
 
 ### Cause
 
-- The bulk
+- The bulk copy take more time to execute than the BulkCopyTimeout specified.
 
 ### Fix
 

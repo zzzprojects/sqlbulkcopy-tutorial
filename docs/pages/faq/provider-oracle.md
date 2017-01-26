@@ -105,6 +105,7 @@ All Oracle provider are supported:
 
 
 Even more, all bulk operations are supported:
+
 - BulkInsert
 - BulkUpdate
 - BulkDelete

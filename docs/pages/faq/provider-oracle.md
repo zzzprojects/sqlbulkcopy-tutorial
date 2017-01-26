@@ -34,6 +34,7 @@ Due to the limitation, unflexibility, and by experience! We highly recommand you
 
 Limitation:
 
+- SLOWER than Array Bindings solution (sometimes 3x slower!)
 - DO NOT support Oracle.ManagedDataAccess
 - DO NOT support all column types
 - DO NOT check constraints

@@ -28,8 +28,9 @@ You can use one of the following solution
 ## Solution - OracleBulkCopy
 Documentation: https://docs.oracle.com/cd/E17666_01/doc/win.112/e17357/OracleBulkCopyClass.htm
 
+This solution only support the provider Oracle.DataAccess.
 
-This solution only work for Oracle.DataAccess but contains a lot of limitation. We do not recommend using thi
+Due to the limitation, unflexibility, and by experience! We highly recommand you to use the **Array Bindings solution** over OracleBulkCopy.
 
 Limitation:
 
@@ -37,11 +38,9 @@ Limitation:
 - DO NOT support all column types
 - DO NOT check constraints
 - DO NOT check triggers
+- CANNOT perform INSERT RETURNING statement
 
-And there is more issue undocumented...
-
-This solution is simply not as flexible as the Array Bindings solution.
-
+> Once you start using Array Bindings, you never look back at this solution.
 
 ## Solution - OracleLoader
 Documentation: http://www.devart.com/dotconnect/oracle/docs/?Devart.Data.Oracle~Devart.Data.Oracle.OracleLoader.html

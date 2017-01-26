@@ -17,7 +17,7 @@ But you still want to know what's the **fastest way to insert** in Oracle using 
 - [Devart.Data.Oracle](https://www.devart.com/dotconnect/oracle/){:target="_blank"}
 
 ## Solution
-You can use one of the following solution
+Proposed solution:
 
 - [OracleBulkCopy](solution-oraclebulkcopy) _(Not recommended)_
 - [OracleLoader](solution-oracleloader) _(Not recommended)_

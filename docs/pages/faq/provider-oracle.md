@@ -19,8 +19,8 @@ But you still want to know what's the **fastest way to insert** in Oracle using 
 ## Solution
 You can use one of the following solution
 
-- [OracleBulkCopy](solution-oraclebulkcopy) _(NOT Recommended)_
-- [OracleLoader](solution-oracleloader) _(NOT Recommended)_
+- [OracleBulkCopy](solution-oraclebulkcopy) _(Not recommended)_
+- [OracleLoader](solution-oracleloader) _(Not recommended)_
 - [Array Bindings](solution-array-bindings)
 - [.NET Bulk Operations](solution-net-bulk-operations)
 

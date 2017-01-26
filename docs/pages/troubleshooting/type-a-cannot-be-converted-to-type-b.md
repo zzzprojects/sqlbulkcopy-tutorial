@@ -48,7 +48,7 @@ using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperat
 
 ### Fix
 
-- ENSURE provided value are valid for the destination type.
+- ENSURE provided value is valid for the destination type.
 - CREATE column by specifying the type to get the error before executing WriteToServer method.
 
 ### Example

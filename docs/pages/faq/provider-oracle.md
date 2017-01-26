@@ -69,6 +69,28 @@ Under the hood, the OracleLoader use the OracleBulkCopy. So for the same limitat
 
 ## Solution - Array Bindings
 
+### Example
+
+{% highlight csharp %}
+using (var connection = new OracleConnection(My.Config.ConnectionStrings.OracleBulkOperations))
+{
+    connection.Open();
+
+    using (var command = new OracleCommand())
+    {
+        command.ArrayBindCount = dt.Rows.Count;
+        command.BindByName = true;
+        command.Connection = connection;
+
+        command.CommandText = "INSERT INTO THEDESTINATIONTABLE (THECOLUMNINT, THECOLUMNSTRING) VALUES (:THECOLUMNINT, :THECOLUMNSTRING)";
+        command.Parameters.Add(":THECOLUMNINT", OracleDbType.Int32, dt.AsEnumerable().Select(x => x["TheColumnInt"]).ToArray(), ParameterDirection.Input);
+        command.Parameters.Add(":THECOLUMNSTRING", OracleDbType.Varchar2, dt.AsEnumerable().Select(x => x["TheColumnString"]).ToArray(), ParameterDirection.Input);
+
+        command.ExecuteNonQuery();
+    }
+}
+{% endhighlight %}
+
 ## Solution - .NET Bulk Operations with Oracle
 
 The .NET Bulk Operations use under the hood the Array Bindings solution and support all Oracle provider:

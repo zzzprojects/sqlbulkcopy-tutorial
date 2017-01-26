@@ -35,11 +35,13 @@ using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperat
 
 ### Cause
 
+- You didn't provided any ColumnMappings, there is more column in the source than in the destination.
 - You provided an invalid column name for the source.
 - You provided an invalid column name for the destination.
 
 ### Fix
 
+- ENSURE to provide a ColumnMappings
 - ENSURE all values for source column name are valid and case sensitive.
 - ENSURE all values for destination column name are valid and case sensitive.
 - MAKE the source case insensitive

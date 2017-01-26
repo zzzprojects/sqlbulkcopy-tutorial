@@ -14,16 +14,18 @@ permalink: columnmapping-does-not-match
 
 ### Example
 {% highlight csharp %}
-// Oops! The destination name is null
-string destinationName = null;
-
 using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperations))
 {
     connection.Open();
 
     using (var bulkCopy = new SqlBulkCopy(connection))
     {
-        bulkCopy.DestinationTableName = destinationName;
+        // Oops! The destination column is case sensitive, it should be instead "TheColumnInt"
+        bulkCopy.ColumnMappings.Add("TheColumnInt", "TheColumnint");
+        bulkCopy.ColumnMappings.Add("TheColumnString", "TheColumnString");
+
+        bulkCopy.BatchSize = 4000;
+        bulkCopy.DestinationTableName = "TheDestinationTable";
         bulkCopy.WriteToServer(dt);
     }
 }
@@ -33,8 +35,24 @@ using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperat
 
 ### Cause
 
-- You provided a null value to the DestinationTableName property.
+- You provided an invalid column name for the source.
+- You provided an invalid column name for the destination.
 
 ### Fix
 
-- ENSURE the value you provided is not null.
+- ENSURE all values for source column name are valid and case sensitive.
+- ENSURE all values for destination column name are valid and case sensitive.
+- MAKE the source case insensitive
+
+> You cannot make the destination column name case insensitive.
+
+### Example - MAKE the source case insensitive
+
+{% highlight csharp %}
+var dt = new DataTable();
+dt.CaseSensitive = false;
+dt.Columns.Add("TheColumnInt", typeof(int));
+dt.Columns.Add("TheColumnString");
+{% endhighlight %}
+
+

@@ -10,7 +10,7 @@ permalink: oracle
 
 You found out SqlBulkCopy is not supported for Oracle.
 
-But you still want to know what's the **fastest way to insert** in Oracle using theses providers:
+But you still want to know what's the **fastest way to insert** in Oracle using one theses providers:
 
 - Oracle.DataAccess
 - Oracle.ManagedDataAccess

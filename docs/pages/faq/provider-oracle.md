@@ -28,9 +28,9 @@ Proposed solution:
 ## Solution - OracleBulkCopy
 Documentation: https://docs.oracle.com/cd/E17666_01/doc/win.112/e17357/OracleBulkCopyClass.htm
 
-This solution only support the provider Oracle.DataAccess.
+This solution only supports the provider Oracle.DataAccess.
 
-Due to the limitation, unflexibility, and by experience! We highly recommand you to use the [Array Bindings solution](#solution---array-bindings) over OracleBulkCopy.
+Due to the limitation and by experience! We highly recommend you to use the [Array Bindings solution](#solution---array-bindings) over OracleBulkCopy.
 
 Limitation:
 
@@ -65,12 +65,12 @@ using (var connection = new OracleConnection(My.Config.ConnectionStrings.OracleB
 ## Solution - OracleLoader
 Documentation: http://www.devart.com/dotconnect/oracle/docs/?Devart.Data.Oracle~Devart.Data.Oracle.OracleLoader.html
 
-This solution only support the provider Devart.Data.Oracle.
+This solution only supports the provider Devart.Data.Oracle.
 
 Under the hood, the OracleLoader use the OracleBulkCopy. So for the same limitation reason, we recommend using Array Binding over this solution.
 
 ## Solution - Array Bindings
-This solution is supported in all providers. This is the fastest solution with the [.NET Bulk Operations](#solution---net-bulk-operations-with-oracle)
+This solution is supported by all providers. That is the fastest solution with the [.NET Bulk Operations](#solution---net-bulk-operations-with-oracle)
 
 ### Example
 
@@ -95,7 +95,7 @@ using (var connection = new OracleConnection(My.Config.ConnectionStrings.OracleB
 {% endhighlight %}
 
 ## Solution - .NET Bulk Operations with Oracle
-This is the **fastest** (use Array Bindings under the hood) and **easiest** solution.
+That is the **fastest** (use Array Bindings under the hood) and **easiest** solution.
 
 All Oracle provider are supported:
 

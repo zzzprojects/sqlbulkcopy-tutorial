@@ -1,7 +1,7 @@
 ---
 layout: default
 title: SqlBulkCopy - The given ColumnMapping does not match up with any column in the source or destination.
-permalink: columnmapping-doest-not-match
+permalink: columnmapping-does-not-match
 ---
 
 {% include template-h1.html %}

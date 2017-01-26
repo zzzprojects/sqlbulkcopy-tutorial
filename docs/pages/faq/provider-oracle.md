@@ -70,7 +70,7 @@ This solution only support the provider Devart.Data.Oracle.
 Under the hood, the OracleLoader use the OracleBulkCopy. So for the same limitation reason, we recommend using Array Binding over this solution.
 
 ## Solution - Array Bindings
-This solution is supported in all providers. It's the fastest solution.
+This solution is supported in all providers. This is the fastest solution with the [.NET Bulk Operations](#solution---net-bulk-operations-with-oracle)
 
 ### Example
 
@@ -95,7 +95,7 @@ using (var connection = new OracleConnection(My.Config.ConnectionStrings.OracleB
 {% endhighlight %}
 
 ## Solution - .NET Bulk Operations with Oracle
-This solution is the faster (use Array Bindings under the hood) and easiest solution.
+This is the **fastest** (use Array Bindings under the hood) and **easiest** solution.
 
 All Oracle provider are supported:
 

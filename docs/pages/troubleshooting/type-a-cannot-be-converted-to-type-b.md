@@ -44,8 +44,16 @@ using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperat
 
 ### Cause
 
-- You provided a null value to the DestinationTableName property.
+- You provided an empty value which cannot be converted to another type.
 
 ### Fix
 
-- ENSURE the value you provided is not null.
+- ENSURE provided value are valid for the destination type.
+- CREATE column by specifying the type to get the error before executing WriteToServer method.
+
+### Example
+{% highlight csharp %}
+var dt = new DataTable();
+dt.Columns.Add("TheColumnInt", typeof(int));
+dt.Columns.Add("TheColumnString", typeof(string));
+{% endhighlight %}

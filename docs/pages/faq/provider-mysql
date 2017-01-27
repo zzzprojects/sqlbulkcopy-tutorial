@@ -4,53 +4,15 @@ title: SqlBulkCopy - MySQL
 permalink: mysql
 ---
 
-    {
-        command.ArrayBindCount = dt.Rows.Count;
-        command.BindByName = true;
-        command.Connection = connection;
+## Problem
 
-        command.CommandText = "INSERT INTO THEDESTINATIONTABLE (THECOLUMNINT, THECOLUMNSTRING) VALUES (:THECOLUMNINT, :THECOLUMNSTRING)";
-        command.Parameters.Add(":THECOLUMNINT", OracleDbType.Int32, dt.AsEnumerable().Select(x => x["TheColumnInt"]).ToArray(), ParameterDirection.Input);
-        command.Parameters.Add(":THECOLUMNSTRING", OracleDbType.Varchar2, dt.AsEnumerable().Select(x => x["TheColumnString"]).ToArray(), ParameterDirection.Input);
+You found out SqlBulkCopy is not supported for Oracle.
 
-        command.ExecuteNonQuery();
-    }
-}
-{% endhighlight %}
-
-## Solution - .NET Bulk Operations with Oracle
-That is the **fastest** (use Array Bindings under the hood) and **easiest** solution.
-
-All Oracle provider are supported:
+But you still want to know what's the **fastest way to insert** in Oracle using one theses providers:
 
 - Oracle.DataAccess
 - Oracle.ManagedDataAccess
-- Devart.Data.Oracle
+- [Devart.Data.Oracle](https://www.devart.com/dotconnect/oracle/){:target="_blank"}
 
-
-Even more, all bulk operations are supported:
-
-- BulkInsert
-- BulkUpdate
-- BulkDelete
-- BulkMerge
-
-{% include template-example.html %} 
-{% highlight csharp %}
-
-// Easy to use
-var bulk = new BulkOperation(connection);
-bulk.BulkInsert(dt);
-bulk.BulkUpdate(dt);
-bulk.BulkDelete(dt);
-bulk.BulkMerge(dt);
-
-// Easy to customize
-var bulk = new BulkOperation<Customer>(connection);
-bulk.BatchSize = 1000;
-bulk.ColumnInputExpression = c => new { c.Name,  c.FirstName };
-bulk.ColumnOutputExpression = c => c.CustomerID;
-bulk.ColumnPrimaryKeyExpression = c => c.Code;
-bulk.BulkMerge(customers);
-
-{% endhighlight %}
+## Solution
+Proposed solution:

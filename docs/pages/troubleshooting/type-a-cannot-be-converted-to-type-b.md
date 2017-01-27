@@ -12,7 +12,7 @@ permalink: type-a-cannot-be-converted-to-type-b
 
 {% include template-exception.html message='The given value of type String from the data source cannot be converted to type int of the specified target column.' %}
 
-### Example
+{% include template-example.html %} 
 {% highlight csharp %}
 var dt = new DataTable();
 dt.Columns.Add("TheColumnInt");

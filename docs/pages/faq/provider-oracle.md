@@ -44,7 +44,7 @@ Limitation:
 
 You can find some restriction here: [Oracle Bulk Copy](https://docs.oracle.com/cd/E51173_01/win.122/e17732/featBulkCopy.htm#ODPNT213){:target="_blank"}
 
-### Example{:class="example"}
+### ExampleZ{:class="example"}
 
 {% highlight csharp %}
 using (var connection = new OracleConnection(My.Config.ConnectionStrings.OracleBulkOperations))

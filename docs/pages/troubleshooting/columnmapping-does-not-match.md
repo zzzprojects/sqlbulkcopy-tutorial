@@ -12,7 +12,7 @@ permalink: columnmapping-does-not-match
 
 {% include template-exception.html message='The given ColumnMapping does not match up with any column in the source or destination.' %}
 
-### Example
+{% include template-example.html %}
 {% highlight csharp %}
 using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperations))
 {

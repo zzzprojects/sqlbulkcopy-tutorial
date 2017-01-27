@@ -12,7 +12,7 @@ permalink: writetoserver-requires-an-open-and-available-connection
 
 {% include template-exception.html message='WriteToServer requires an open and available Connection. The connection\'s current state is closed.' %}
 
-### Example
+{% include template-example.html %} 
 {% highlight csharp %}
 using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperations))
 {

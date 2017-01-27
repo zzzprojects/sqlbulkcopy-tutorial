@@ -12,7 +12,7 @@ permalink: timeout-expired
 
 {% include template-exception.html message='Execution Timeout Expired. The timeout period elapsed prior to completion of the operation or the server is not responding.' %}
 
-### Example
+{% include template-example.html %} 
 {% highlight csharp %}
 // Oops! The specified timeout may be a little bit to low!
 bulkCopyTimeout = 1;

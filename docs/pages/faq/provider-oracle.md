@@ -44,8 +44,7 @@ Limitation:
 
 You can find some restriction here: [Oracle Bulk Copy](https://docs.oracle.com/cd/E51173_01/win.122/e17732/featBulkCopy.htm#ODPNT213){:target="_blank"}
 
-### Example
-
+{% include template-example.html %} 
 {% highlight csharp %}
 using (var connection = new OracleConnection(My.Config.ConnectionStrings.OracleBulkOperations))
 {
@@ -72,8 +71,7 @@ Under the hood, the OracleLoader use the OracleBulkCopy. So for the same limitat
 ## Solution - Array Bindings
 This solution is supported by all providers. That is the fastest solution with the [.NET Bulk Operations](#solution---net-bulk-operations-with-oracle)
 
-### Example
-
+{% include template-example.html %} 
 {% highlight csharp %}
 using (var connection = new OracleConnection(My.Config.ConnectionStrings.OracleBulkOperations))
 {
@@ -111,6 +109,7 @@ Even more, all bulk operations are supported:
 - BulkDelete
 - BulkMerge
 
+{% include template-example.html %} 
 {% highlight csharp %}
 
 // Easy to use

@@ -12,7 +12,7 @@ permalink: cannot-access-destination-table
 
 {% include template-exception.html message='Cannot access destination table \'[TheInvalidTableName]\'.' %}
 
-### Example
+{% include template-example.html %}
 {% highlight csharp %}
 // Oops! The table name is invalid
 string destinationName = "[TheInvalidTableName]";

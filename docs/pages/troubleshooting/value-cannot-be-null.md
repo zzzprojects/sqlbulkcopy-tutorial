@@ -12,7 +12,7 @@ permalink: value-cannot-be-null
 
 {% include template-exception.html message='Value cannot be null.' %}
 
-### Example
+{% include template-example.html %} 
 {% highlight csharp %}
 // Oops! The destination name is null
 string destinationName = null;

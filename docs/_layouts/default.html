@@ -131,16 +131,25 @@ header .navbar .active a {
     {% endif %}
 {% endfor %}
 
-<nav class="pagination">
-    <div class="next">
-        <a href="{{ site.data.permalink[next_i].permalink }}">Next</a>
+<nav class="pagination row">
+    <div class="previous col flex-first">
+        <a href="{{ site.data.permalink[prev_i].permalink }}" class="btn btn-primary" role="button">Previous</a>
     </div>
-    <div class="previous">
-        <a href="{{ site.data.permalink[prev_i].permalink }}">Previous</a>
+    <div class="next col flex-last text-right">
+        <a href="{{ site.data.permalink[next_i].permalink }}" class="btn btn-primary" role="button">Next</a>
     </div>
 </nav>
 				
 {{ content }}
+				
+<nav class="pagination row">
+    <div class="previous col flex-first">
+        <a href="{{ site.data.permalink[prev_i].permalink }}" class="btn btn-primary" role="button">Previous</a>
+    </div>
+    <div class="next col flex-last text-right">
+        <a href="{{ site.data.permalink[next_i].permalink }}" class="btn btn-primary" role="button">Next</a>
+    </div>
+</nav>
 			</article>
 		</div>
 		<div class="col-sm-3">

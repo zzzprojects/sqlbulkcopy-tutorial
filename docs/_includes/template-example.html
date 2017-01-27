@@ -1,1 +1,7 @@
-<h3>Example</h3>
+<h3>
+{% if include.title == null %}
+  Example
+{% else %}
+  {{ include.title }}
+{% endif %}
+</h3>

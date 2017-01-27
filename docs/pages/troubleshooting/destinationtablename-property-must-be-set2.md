@@ -28,9 +28,7 @@ This error can be caused for the following reasons:
 -ENSURE the destination table name exist. Make a SELECT * FROM [TheDestinationTable] in SSMS
 -ENSURE the user have right. Log with the user information into SSMS and make the SELECT * FROM [TheDestinationTable]
 
-### BAD Example
-     
-{% include begin-code.html %}
+{% include template-example.html title="BAD Example" %} 
 {% highlight csharp %}
 string destinationName = "TheDestinationTable";
 
@@ -51,4 +49,3 @@ using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperat
     }
 }
 {% endhighlight %}
-{% include end-code.html %}

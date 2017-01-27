@@ -25,3 +25,54 @@ h3 {
 pre {
   padding: 7px;
 }
+
+<style>
+.header-brand {
+	font-size: 36px;
+	padding-left: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.header-brand-color-1 {
+	color: #0275d8;
+}
+
+.header-brand-color-2 {
+	color: #555;
+}
+
+header .navbar {
+	background-color: #2c3e50;
+	/* background-color: #bdd6de; */
+	color: #193944;
+}
+
+header .navbar {
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+header .navbar a .fa-home {
+	color: #fff;
+	font-size: 24px;
+}
+header .navbar a {
+	color: #fff;
+
+}
+
+header .navbar-nav .nav-link {
+	padding-left: 1rem !important;
+	padding-right: 1rem !important;
+}
+
+header .navbar .active {
+	background-color: #1a242f;
+	/*background-color: #193944;*/
+}
+
+header .navbar .active a {
+	color: #edf5fa;
+}
+</style>

@@ -12,7 +12,7 @@ permalink: the-destinationtablename-property-must-be-set-before-calling-this-met
 
 {% include template-exception.html message='The DestinationTableName property must be set before calling this method.' %}
 
-### Example
+{% include template-example.html %} 
 {% highlight csharp %}
 // Oops! The destination name is empty
 string destinationName = "";

@@ -19,10 +19,12 @@
  </head>
   <body>
 	<header>
-		<div class="container-fluid" style="background-color: #b1d2fb;">
+	
+		<!-- header-brand !-->
+		<div class="container-fluid bg-gray">
 			<div class="header-brand row">
 				<div class="col-sm-10">
-					<span class="header-brand-color-1">
+					<span class="header-brand-color-1 text-primary">
 						<i class="fa fa-book" aria-hidden="true"></i>&nbsp;SqlBulkCopy
 					</span>
 					<span class="header-brand-color-2">
@@ -34,82 +36,58 @@
 				</div>
 			</div>
 		</div>
-		<div class="sticky-top"> <!-- doesn't work yet? !-->
-			<nav class="navbar navbar-toggleable-md">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
-						<a class="nav-link" href="index"><i class="fa fa-home" aria-hidden="true"></i></a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="sqlbulkcopy">API</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="examples">Examples</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="faq">FAQ</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="limitation">Limitation</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="troubleshooting">Troubleshooting</a>
-					</li>
-				</ul>
-			</nav>
-		</div>
+		
+		<!-- navbar !-->
+		<nav class="navbar navbar-inverse bg-inverse navbar-toggleable-md">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="index"><i class="fa fa-home" aria-hidden="true"></i></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="sqlbulkcopy">API</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="examples">Examples</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="faq">FAQ</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="limitation">Limitation</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="troubleshooting">Troubleshooting</a>
+				</li>
+			</ul>
+		</nav>
 	</header>
+	
 <style>
-.header-brand {
+.bg-gray {
+ background-color: #eceeef;
+}
+</style>
+
+<style>
+header .header-brand {
 	font-size: 36px;
 	padding-left: 20px;
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
-
-.header-brand-color-1 {
-	/*color: #0275d8;*/
-	color: #052f61;
-}
-
-.header-brand-color-2 {
-	color: #555;
-}
-
-header .navbar {
-	background-color: #052f61;
-	/*background-color: #2c3e50;*/
-	/* background-color: #bdd6de; */
-	color: #193944;
-}
-
 header .navbar {
 	padding-top: 0px;
 	padding-bottom: 0px;
 }
-
 header .navbar a .fa-home {
-	color: #fff;
 	font-size: 24px;
 }
-header .navbar a {
-	color: #fff;
-
-}
-
 header .navbar-nav .nav-link {
 	padding-left: 1rem !important;
 	padding-right: 1rem !important;
 }
-
 header .navbar .active {
-	background-color: #021730;
-	/*background-color: #1a242f;*/
-	/*background-color: #193944;*/
-}
-
-header .navbar .active a {
-	color: #edf5fa;
+	background-color: #5cb85c;
 }
 </style>
 	
@@ -161,11 +139,11 @@ header .navbar .active a {
 		</div>
 		<div class="col-sm-3">
 			<br /><br /><br /><br /><br /><br /><br /><br />
-			<div style="height: 300px; width: 250px; background-color: #000;">
+			<div style="height: 300px; width: 250px; background-color: #000; color: #fff;">
 				Ads 1
 			</div>
 			<br /><br />
-			<div style="height: 300px; width: 250px; background-color: #000;">
+			<div style="height: 300px; width: 250px; background-color: #000; color: #fff;">
 				Ads 2
 			</div>
 			<br /><br /><br /><br />
@@ -173,53 +151,38 @@ header .navbar .active a {
 	</div>
 	</div>
 
-	<footer>
+	<footer class="bg-gray">
 		<div class="container-fluid">
-		<div class="row">
-			<div class="col-sm-7">
-				&nbsp;Powered by .NET Bulk Operations
-			</div>
-			<div class="col-sm-4">
-				
-				<div class="mailing-widget widget">
-					<div class="title-widget">Email List</div>
-					<div class="content-wiget">
-					<p>Get free EF cheat sheet and latest updates/tips/tricks on EF by subscribing to our mailing list.</p>
-					<form action="//zzzprojects.us9.list-manage.com/subscribe/post?u=cecbc4775cf67bf1ff82018af&amp;id=619c1a2203" method="post" id="subscribe-form" name="subscribe-form" class="validate bv-form" target="_blank" novalidate="novalidate"><button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
-
-						<div class="form-group has-feedback">
-							<input type="text" value="" placeholder="Name *" name="FNAME" class="form-control form-email-widget" id="mce-FNAME" required="" data-bv-field="FNAME"><i class="form-control-feedback bv-no-label" data-bv-icon-for="FNAME" style="display: none;"></i>
-						</div>
-						<div class="form-group has-feedback">
-							<input type="email" value="" placeholder="Email *" name="EMAIL" class="form-control form-email-widget" id="mce-EMAIL" required="" data-bv-field="EMAIL"><i class="form-control-feedback bv-no-label" data-bv-icon-for="EMAIL" style="display: none;"></i>
-						</div>
-						<div id="mce-responses" class="clear">
-							<div class="response" id="mce-error-response" style="display: none"></div>
-							<div class="response" id="mce-success-response" style="display: none"></div>
-						</div>
-
-						<div style="position: absolute; left: -5000px;" aria-hidden="true">
-							<input type="text" name="b_659e2cbd2829799e7dc94ae35_93dae2ea03" tabindex="-1" value="">
-						</div>
-						<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-subscribe">
-						<div class="alert-success" id="successMsg"></div>
-						<div class="alert-danger has-error" id="failMsg"><small class="help-block" data-bv-validator="notEmpty" data-bv-for="FNAME" data-bv-result="NOT_VALIDATED" style="display: none;">The name is required and cannot be empty</small><small class="help-block" data-bv-validator="notEmpty" data-bv-for="EMAIL" data-bv-result="NOT_VALIDATED" style="display: none;">The email address is required and cannot be empty</small><small class="help-block" data-bv-validator="emailAddress" data-bv-for="EMAIL" data-bv-result="NOT_VALIDATED" style="display: none;">The email address is not valid</small></div>
-					</form>
-					</div>
+			<div class="row">
+				<div class="col-sm-7">
+					&nbsp;Powered by <a href="http://entityframework-extensions.net/">Entity Framework Extensions</a>
 				</div>
-	
+				<div class="col-sm-4">
+					<h2 class="text-danger"><i class="fa fa-envelope-open" aria-hidden="true"></i>&nbsp;Subscribe to our mailing list</h2>
+					<p class="font-italic">Get latest updates/tips/tricks on SqlBulkCopy by subscribing to our mailing list.</p>
+					<form action="//zzzprojects.us9.list-manage.com/subscribe/post?u=cecbc4775cf67bf1ff82018af&amp;id=619c1a2203" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+						<div id="mc_embed_signup_scroll">
+							<div class="form-group">
+								<label for="EMAIL" class="form-label">Email Address  <span class="asterisk">*</span></label>
+								<input type="email" value="" name="EMAIL" class="required form-control" id="mce-EMAIL" placeholder="Enter email">
+							</div>
+							<div id="mce-responses" class="clear">
+								<div class="response" id="mce-error-response" style="display:none"></div>
+								<div class="response" id="mce-success-response" style="display:none"></div>
+							</div>
+							<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_cecbc4775cf67bf1ff82018af_619c1a2203" tabindex="-1" value=""></div>
+							<div class="clear">
+							<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-danger"></div>
+						</div>
+					</form>
+				</div>
 			</div>
-		</div>
 		</div>
 	</footer>
    
 <style>
 footer {
-	background-color: #bdd6de;
-	min-height: 60px;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	padding-left: 20px;
+	padding: 20px;
 }
 </style>
 

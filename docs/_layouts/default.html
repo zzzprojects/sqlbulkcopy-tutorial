@@ -91,9 +91,10 @@ header .navbar .active {
 }
 </style>
 	
-
 	<div class="container-fluid">
 		<div class="row" style="min-height: 800px;">
+
+{{ if path == "index.md" }}
 			<div class="col-sm-2">
 				<aside>
 	{% include aside.html %}
@@ -116,7 +117,6 @@ header .navbar .active {
 	    {% endif %}
 	{% endfor %}
 
-{{ if path != "index.md" }}
 <nav class="pagination row">
     <div class="previous col flex-first">
         <a href="{{ site.data.permalink[prev_i].permalink }}" class="btn btn-primary" role="button">Previous</a>
@@ -124,12 +124,10 @@ header .navbar .active {
     <div class="next col flex-last text-right">
         <a href="{{ site.data.permalink[next_i].permalink }}" class="btn btn-primary" role="button">Next</a>
     </div>
-</nav>
-{{ endif }}					
+</nav>				
 					
 {{ content }}
 
-{{ if path != "index.md" }}
 <nav class="pagination row">
     <div class="previous col flex-first">
         <a href="{{ site.data.permalink[prev_i].permalink }}" class="btn btn-primary" role="button">Previous</a>
@@ -137,10 +135,10 @@ header .navbar .active {
     <div class="next col flex-last text-right">
         <a href="{{ site.data.permalink[next_i].permalink }}" class="btn btn-primary" role="button">Next</a>
     </div>
-</nav>
-{{ endif }}			
+</nav>		
 			</article>
 		</div>
+			
 		<div class="col-sm-3">
 			<br /><br /><br /><br /><br /><br /><br /><br />
 			<div style="height: 300px; width: 250px; background-color: #000; color: #fff;">
@@ -152,6 +150,12 @@ header .navbar .active {
 			</div>
 			<br /><br /><br /><br />
 		</div>
+{{ else }}
+
+{{ content }}
+			
+{{ endif }}
+			
 	</div>
 	</div>
 

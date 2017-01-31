@@ -94,7 +94,7 @@ header .navbar .active {
 	<div class="container-fluid">
 		<div class="row" style="min-height: 800px;">
 
-{{ if page.path != "index.md" }}
+{% if page.path != "index.md" %}
 			<div class="col-sm-2">
 				<aside>
 	{% include aside.html %}
@@ -150,12 +150,12 @@ header .navbar .active {
 			</div>
 			<br /><br /><br /><br />
 		</div>
-{{ else }}
+{% else %}
 
 			<div class="col-sm-1"></div>
 			<div class="col-sm-10">{{ content }}</div>
 			<div class="col-sm-1"></div>	
-{{ endif }}
+{% endif %}
 			
 	</div>
 	</div>

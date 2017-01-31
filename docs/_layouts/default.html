@@ -116,6 +116,7 @@ header .navbar .active {
 	    {% endif %}
 	{% endfor %}
 
+{{ if path != "index.md" }}
 <nav class="pagination row">
     <div class="previous col flex-first">
         <a href="{{ site.data.permalink[prev_i].permalink }}" class="btn btn-primary" role="button">Previous</a>
@@ -124,11 +125,11 @@ header .navbar .active {
         <a href="{{ site.data.permalink[next_i].permalink }}" class="btn btn-primary" role="button">Next</a>
     </div>
 </nav>
-
-{{ page.path }}
+{{ endif }}					
 					
 {{ content }}
-				
+
+{{ if path != "index.md" }}
 <nav class="pagination row">
     <div class="previous col flex-first">
         <a href="{{ site.data.permalink[prev_i].permalink }}" class="btn btn-primary" role="button">Previous</a>
@@ -137,6 +138,7 @@ header .navbar .active {
         <a href="{{ site.data.permalink[next_i].permalink }}" class="btn btn-primary" role="button">Next</a>
     </div>
 </nav>
+{{ endif }}			
 			</article>
 		</div>
 		<div class="col-sm-3">

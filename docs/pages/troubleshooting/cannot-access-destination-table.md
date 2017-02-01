@@ -2,7 +2,6 @@
 layout: default
 title: SqlBulkCopy - Cannot access destination table '[TheInvalidTableName]'.
 permalink: cannot-access-destination-table
-last_modified_at: 2017-02-01
 ---
 
 {% include template-h1.html %}

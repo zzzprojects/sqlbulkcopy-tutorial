@@ -12,7 +12,7 @@ test12
 	{{ site.data.permalink[num].permalink }}
 	{{ site.data.permalink[num].category }}
 		
-	z
+	z6
 	{% if site.data.permalink[num].category == page.permalink %}
 
 		

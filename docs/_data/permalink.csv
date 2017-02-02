@@ -1,11 +1,11 @@
-permalink,
-sqlbulkcopy,
-batchsize,
-bulkcopytimeout,
-columnmappings,
-destinationtablename,
-enablestreaming,
-notifyafter,
-writetoserver,
-writetoserverasync,
-sqlrowscopied,
+permalink, category
+sqlbulkcopy, api
+batchsize, api
+bulkcopytimeout, api
+columnmappings, api
+destinationtablename, api
+enablestreaming, api
+notifyafter, api
+writetoserver, api
+writetoserverasync, api
+sqlrowscopied, api

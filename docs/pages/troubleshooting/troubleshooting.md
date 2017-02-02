@@ -10,6 +10,8 @@ test12
 <ul>
 {% for num in (0..site.data.permalink.size) %}
 	{{ site.data.permalink[num].permalink }}
+	{{ site.data.permalink[num].category }}
+		
 	z
 	{% if site.data.permalink[num].category == page.permalink %}
 

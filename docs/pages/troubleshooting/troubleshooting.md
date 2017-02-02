@@ -9,7 +9,7 @@ permalink: troubleshooting
 {% for num in (0..site.data.permalink.size) %}
 	{% if site.data.permalink[num].category == page.permalink %}
 	
-		{% site.data.permalink[num].permalink %}
+	
 		
 	{% endif %}
 {% endfor %}

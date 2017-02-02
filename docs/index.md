@@ -36,9 +36,6 @@ layout: default
 			</p>
 		</div>
 	</div>
-</div>
-
-<div class="row">
 	<div class="col-md-6 col-lg-4">
 		<div class="jumbotron">
 			<h2 class="display-4">FAQ</h2>

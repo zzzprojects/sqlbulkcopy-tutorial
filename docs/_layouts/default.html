@@ -38,27 +38,33 @@
 		</div>
 		
 		<!-- navbar !-->
-		<nav class="navbar navbar-inverse bg-inverse navbar-toggleable-md">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active">
-					<a class="nav-link" href="index"><i class="fa fa-home" aria-hidden="true"></i></a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="sqlbulkcopy">API</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="examples">Examples</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="faq">FAQ</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="limitation">Limitations</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="troubleshooting">Troubleshooting</a>
-				</li>
-			</ul>
+		<nav class="navbar navbar-inverse bg-inverse navbar-toggleable-md" style="min-height: 40px;">
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			
+			<div id="navbarSupportedContent" class="collapse navbar-collapse">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="/"><i class="fa fa-home" aria-hidden="true"></i></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="sqlbulkcopy">API</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="examples">Examples</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="faq">FAQ</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="limitations">Limitations</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="troubleshooting">Troubleshooting</a>
+					</li>
+				</ul>
+			</div>
 		</nav>
 	</header>
 	
@@ -162,10 +168,11 @@ header .navbar .active {
 	<footer class="bg-gray">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-sm-7">
+				<div class="col-md-7">
 					&nbsp;Powered by <a href="http://entityframework-extensions.net/">Entity Framework Extensions</a>
+					<hr class="hidden-md-up" />
 				</div>
-				<div class="col-sm-4">
+				<div class="col-md-4">
 					<h2 class="text-primary"><i class="fa fa-envelope-open" aria-hidden="true"></i>&nbsp;Subscribe to our mailing list</h2>
 					<p class="font-italic">Get latest updates/tips/tricks on SqlBulkCopy by subscribing to our mailing list.</p>
 					<form action="//zzzprojects.us9.list-manage.com/subscribe/post?u=cecbc4775cf67bf1ff82018af&amp;id=619c1a2203" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>

@@ -6,6 +6,7 @@ permalink: troubleshooting
 
 {% include template-h1.html %}
 
+<ul>
 {% for num in (0..site.data.permalink.size) %}
 	{% if site.data.permalink[num].category == page.permalink %}
 	
@@ -13,3 +14,4 @@ permalink: troubleshooting
 		
 	{% endif %}
 {% endfor %}
+</ul>

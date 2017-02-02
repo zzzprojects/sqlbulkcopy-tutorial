@@ -6,7 +6,7 @@ permalink: troubleshooting
 
 {% include template-h1.html %}
 
-test1
+test12
 <ul>
 {% for num in (0..site.data.permalink.size) %}
 	{% site.data.permalink[num].category %}

@@ -1,4 +1,4 @@
-test 6
+test 7
 
 {% assign isFirst = true %}
 {% for num in (0..site.data.pages.size) %}	

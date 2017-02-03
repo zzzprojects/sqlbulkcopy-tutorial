@@ -7,8 +7,16 @@ permalink: sqlbulkcopyoptions
 {% include template-h1.html %}
 
 ## Description
+Bitwise flag that specifies one or more options.
 
-Options
+### Remarks
+You can specify more than one value by using the "|" operators
+
+{% highlight csharp %}
+var options = SqlBulkCopyOptions.CheckConstraints | SqlBulkCopyOptions.FireTriggers | SqlBulkCopyOptions.TableLock;
+{% endhighlight %}
+
+## Options
 
 | Name | Default | Description |
 | ---- | :-----: | ----------- |

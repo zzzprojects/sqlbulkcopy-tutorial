@@ -28,5 +28,3 @@ using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString))
 	// ...code...
 }
 {% endhighlight %}
-
-{% include template-related.md %}

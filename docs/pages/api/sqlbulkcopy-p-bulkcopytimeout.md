@@ -9,3 +9,15 @@ permalink: bulkcopytimeout
 ## Description
 
 Number of seconds maximum for a batch before it times out.
+
+## Example
+{% include template-example.html %} 
+{% highlight csharp %}
+using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString))
+{
+	// SET the BatchSize.
+	bulkCopy.BatchSize = 50;
+	
+	// ...code...
+}
+{% endhighlight %}

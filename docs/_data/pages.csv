@@ -11,3 +11,4 @@ SqlBulkCopy - WriteToServerAsync,writetoserverasync,api,
 SqlBulkCopy - SqlRowsCopied,sqlrowscopied,api,
 SqlBulkCopy - Timeout Expired,timeout-expired,troubleshooting,
 SqlBulkCopy - Column Mapping...,columnmapping-does-not-match,troubleshooting,
+Test API,columnmapping-does-not-match,troubleshooting,batchsize

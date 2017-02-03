@@ -1,4 +1,4 @@
-test 2
+test 3
 
 {% assign hasOne = false %}
 {% for num in (0..site.data.pages.size) %}	
@@ -8,7 +8,9 @@ test 2
 {% endfor %}
 
 {% if hasOne == true %}
-## Troubleshooting
+
+<h2>Troubleshooting</h2>
+
 <ul>
 {% for num in (0..site.data.pages.size) %}	
 	{% if site.data.pages[num].tags contains page.permalink %}

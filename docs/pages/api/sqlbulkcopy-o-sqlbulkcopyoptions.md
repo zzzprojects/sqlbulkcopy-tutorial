@@ -10,7 +10,7 @@ permalink: sqlbulkcopyoptions
 Bitwise flag that specifies one or more options.
 
 ### Remarks
-You can specify more than one value by using the "|" operators
+You can specify more than one value by using the "|" operators (Logical OR).
 
 {% include template-example.html %} 
 {% highlight csharp %}

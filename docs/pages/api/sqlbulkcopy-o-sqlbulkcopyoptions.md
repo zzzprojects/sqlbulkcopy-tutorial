@@ -9,14 +9,6 @@ permalink: sqlbulkcopyoptions
 ## Description
 Bitwise flag that specifies one or more options.
 
-### Remarks
-You can specify more than one value by using the "|" operators (Logical OR).
-
-{% include template-example.html %} 
-{% highlight csharp %}
-var options = SqlBulkCopyOptions.CheckConstraints | SqlBulkCopyOptions.FireTriggers | SqlBulkCopyOptions.TableLock;
-{% endhighlight %}
-
 ## Options
 
 | Name | Default | Description |
@@ -29,6 +21,15 @@ var options = SqlBulkCopyOptions.CheckConstraints | SqlBulkCopyOptions.FireTrigg
 | KeepNulls | No | 	Preserve null values in the destination table regardless of the settings for default values. When not specified, null values are replaced by default values where applicable. |
 | TableLock | No | Obtain a bulk update lock for the duration of the bulk copy operation. When not specified, row locks are used. |
 | UseInternalTransaction | No | When specified, each batch of the bulk-copy operation will occur within a transaction. |
+
+## Remarks
+You can specify more than one value by using the "|" operators (Logical OR).
+
+{% include template-example.html %} 
+{% highlight csharp %}
+var options = SqlBulkCopyOptions.CheckConstraints | SqlBulkCopyOptions.FireTriggers | SqlBulkCopyOptions.TableLock;
+{% endhighlight %}
+
 
 {% include template-example.html %} 
 {% highlight csharp %}

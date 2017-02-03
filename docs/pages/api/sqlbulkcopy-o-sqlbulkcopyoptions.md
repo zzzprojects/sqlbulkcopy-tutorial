@@ -14,7 +14,7 @@ Options
 | ---- | :-----: | ----------- |
 | AllowEncryptedValueModifications | No | Allow for always encrypted |
 | CheckConstraints | No |  Check constraints while data is being inserted. By default, constraints are not checked. |
-| Default | Yes |  |
+| Default | Yes | Default options = None. |
 | FireTriggers | No |  When specified, cause the server to fire the insert triggers for the rows being inserted into the database. By default, triggers are not fired. |
 | KeepIdentity | No | Preserve source identity values. When not specified, identity values are assigned by the destination. |
 | KeepNulls | No | 	Preserve null values in the destination table regardless of the settings for default values. When not specified, null values are replaced by default values where applicable. |

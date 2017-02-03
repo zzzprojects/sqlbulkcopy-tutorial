@@ -40,5 +40,6 @@ using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString))
 
 {% include end-block-h2.html %}
 
+## Troubleshooting
 {% include begin-block-h2.html title='Troubleshooting' %}
 {% include end-block-h2.html %}

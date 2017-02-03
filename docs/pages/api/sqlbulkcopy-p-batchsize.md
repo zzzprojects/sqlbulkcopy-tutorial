@@ -35,7 +35,7 @@ using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString))
 
 {% include end-block-h2.html %}
 
-{% include begin-block-h2.html title='FAQ' %}
+## FAQ
 - What is the recommanded batch size for SqlBulkCopy?
 
 {% include end-block-h2.html %}

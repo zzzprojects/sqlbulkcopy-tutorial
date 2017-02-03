@@ -225,7 +225,6 @@ $(function() {
 	var pathname = window.location.href;
 
 	$('aside a').each(function() {
-		alert($(this).attr('href'));
 		if ($(this).attr('href') == pathname || 'http://www.sqlbulkcopy-tutorial.net/' + $(this).attr('href') == pathname)
 		{
 			$(this).addClass('font-weight-bold');

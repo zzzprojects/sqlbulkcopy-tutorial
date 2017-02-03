@@ -6,6 +6,21 @@ permalink: sqlbulkcopy
 
 {% include template-h1.html %}
 
+{% include begin-block-h2.html title='Options' %}
+<table class="table table-striped table-hover table-responsive">
+	<thead>
+		<th>Name</th>
+		<th>Description</th>		
+	</thead>
+	<tbody>
+		<tr>
+			<td><a href='batchsize'>SqlBulkCopyOptions</a></td>
+			<td>Bitwise flag that specifies one or more options.</td>
+		</tr>
+	</tbody>
+</table>
+{% include end-block-h2.html %}
+
 {% include begin-block-h2.html title='Properties' %}
 <table class="table table-striped table-hover table-responsive">
 	<thead>

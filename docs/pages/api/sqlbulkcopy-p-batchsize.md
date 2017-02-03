@@ -29,9 +29,4 @@ using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString))
 }
 {% endhighlight %}
 
-## FAQ
-- What is the recommanded batch size for SqlBulkCopy?
-
-{% include end-block-h2.html %}
-
-## Troubleshooting
+{% include template-related.md %}

@@ -1,4 +1,4 @@
-test 1
+test 2
 
 {% assign hasOne = false %}
 {% for num in (0..site.data.pages.size) %}	

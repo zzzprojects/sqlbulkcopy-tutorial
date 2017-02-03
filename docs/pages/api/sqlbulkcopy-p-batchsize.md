@@ -12,11 +12,11 @@ Number of rows for a batch.
 - Type: System.Int32
 - Default Value: 0 _(Unlimited)_
 
-If you need to INSERT 250 rows with a BatchSize of 100, 3 batchs will be sent to the server
+If you need to INSERT 250 rows with a BatchSize of 100, 3 batchs will be sent to the server.
 
-1. 100 rows
-2. 100 rows
-3. 50 rows
+- Batch 1: 100 rows
+- Batch 2: 100 rows
+- Batch 3: 50 rows
 
 {% include template-example.html %} 
 {% highlight csharp %}

@@ -6,7 +6,9 @@ permalink: batchsize
 
 {% include template-h1.html %}
 
+## Description
 Type: System.Int32
+
 Number of rows for a batch.
 
 If you need to INSERT 250 rows with a BatchSize of 100, 3 batchs will be sent to the server

@@ -1,4 +1,4 @@
-page.permalink
+test 3
 
 {% assign isFirst = true %}
 {% for num in (0..site.data.pages.size) %}	

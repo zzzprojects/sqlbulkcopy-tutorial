@@ -1,0 +1,13 @@
+title,url,category,tags
+SqlBulkCopy,sqlbulkcopy,api,
+SqlBulkCopy - BatchSize,batchsize,api,
+SqlBulkCopy - BulkCopyTimeout,bulkcopytimeout,api,
+SqlBulkCopy - ColumnMappings,columnmappings,api,
+SqlBulkCopy - DestinationTableName,destinationtablename,api,
+SqlBulkCopy - EnableStreaming,enablestreaming,api,
+SqlBulkCopy - NotifyAfter,notifyafter,api,
+SqlBulkCopy - WriteToServer,writetoserver,api,
+SqlBulkCopy - WriteToServerAsync,writetoserverasync,api,
+SqlBulkCopy - SqlRowsCopied,sqlrowscopied,api,
+SqlBulkCopy - Timeout Expired,timeout-expired,troubleshooting,
+SqlBulkCopy - Column Mapping...,columnmapping-does-not-match,troubleshooting,

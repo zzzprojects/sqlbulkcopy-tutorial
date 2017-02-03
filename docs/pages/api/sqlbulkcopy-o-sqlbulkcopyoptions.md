@@ -1,6 +1,6 @@
 ---
 layout: default
-title: SqlBulkCopy WriteToServerAsync
+title: SqlBulkCopy - SqlBulkCopyOptions
 permalink: sqlbulkcopyoptions
 ---
 
@@ -31,6 +31,7 @@ var options = SqlBulkCopyOptions.CheckConstraints | SqlBulkCopyOptions.FireTrigg
 {% endhighlight %}
 
 
+## Examples
 {% include template-example.html %} 
 {% highlight csharp %}
 using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperations))

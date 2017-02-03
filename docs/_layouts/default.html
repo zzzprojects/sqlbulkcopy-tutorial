@@ -225,6 +225,7 @@ $(function() {
 	var pathname = window.location.href;
 
 	$('aside a').each(function() {
+		alert($(this).attr('href'));
 		if ($(this).attr('href') == pathname)
 		{
 			$(this).addClass('font-weight-bold');

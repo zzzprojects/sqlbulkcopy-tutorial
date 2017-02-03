@@ -12,6 +12,7 @@ Bitwise flag that specifies one or more options.
 ### Remarks
 You can specify more than one value by using the "|" operators
 
+{% include template-example.html %} 
 {% highlight csharp %}
 var options = SqlBulkCopyOptions.CheckConstraints | SqlBulkCopyOptions.FireTriggers | SqlBulkCopyOptions.TableLock;
 {% endhighlight %}

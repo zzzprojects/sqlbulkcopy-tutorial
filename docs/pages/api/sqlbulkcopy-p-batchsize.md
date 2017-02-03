@@ -29,4 +29,4 @@ using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString))
 }
 {% endhighlight %}
 
-{% include template-related.html %}
+{% include template-related.md %}

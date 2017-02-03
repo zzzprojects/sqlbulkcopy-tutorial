@@ -8,7 +8,7 @@ test 9
 {% endfor %}
 
 {% if hasOne == true %}
-<h2>Troubleshooting</h2>
+## Troubleshooting
 <ul>
 {% for num in (0..site.data.pages.size) %}	
 	{% if site.data.pages[num].tags contains page.permalink %}

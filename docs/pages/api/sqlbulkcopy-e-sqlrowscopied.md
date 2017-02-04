@@ -15,9 +15,12 @@ Even raised after the number of row in the NotifyAfter has been processed.
 {% highlight csharp %}
 using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString))
 {
-	// SET the BatchSize.
-	bulkCopy.BatchSize = 50;
-	
-	// ...code...
+    // SET SqlRowsCopied event.
+    bulkCopy.SqlRowsCopied += (sender, args) => { /* code */ }; 
+    
+    bulkCopy.NotifyAfter = 4000;
+
+    // ...ColumnMappings & Options...
+    bulkCopy.WriteToServer(reader);
 }
 {% endhighlight %}

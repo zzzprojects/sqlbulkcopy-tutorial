@@ -34,13 +34,10 @@ var options = SqlBulkCopyOptions.CheckConstraints | SqlBulkCopyOptions.FireTrigg
 ## Examples
 {% include template-example.html %} 
 {% highlight csharp %}
-using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperations))
+// SET SqlBulkCopyOptions value.
+using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString, SqlBulkCopyOptions.CheckConstraints | SqlBulkCopyOptions.FireTriggers))
 {
-    using (var bulkCopy = new SqlBulkCopy(connection, SqlBulkCopyOptions.CheckConstraints | SqlBulkCopyOptions.FireTriggers, null))
-    {
-        bulkCopy.BatchSize = 4000;
-        bulkCopy.DestinationTableName = "TheDestinationTable";
-        bulkCopy.WriteToServer(dt);
-    }
+    // ...ColumnMappings &  Options...
+    bulkCopy.WriteToServer(dt);
 }
 {% endhighlight %}

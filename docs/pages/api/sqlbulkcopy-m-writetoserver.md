@@ -17,6 +17,6 @@ using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString))
     // ...ColumnMappings & Options...
     
     // CALL WriteToServer method.
-    bulkCopy.WriteToServer(reader);
+    bulkCopy.WriteToServer(dt);
 }
 {% endhighlight %}

@@ -1,5 +1,6 @@
 title,url,category,tags
 SqlBulkCopy,sqlbulkcopy,api,
+SqlBulkCopy - SqlBulkCopyOptions,sqlbulkcopyoptions,api,
 SqlBulkCopy - BatchSize,batchsize,api,
 SqlBulkCopy - BulkCopyTimeout,bulkcopytimeout,api,
 SqlBulkCopy - ColumnMappings,columnmappings,api,
@@ -11,4 +12,8 @@ SqlBulkCopy - WriteToServerAsync,writetoserverasync,api,
 SqlBulkCopy - SqlRowsCopied,sqlrowscopied,api,
 SqlBulkCopy - Timeout Expired,timeout-expired,troubleshooting,
 SqlBulkCopy - Column Mapping...,columnmapping-does-not-match,troubleshooting,
-Test API,columnmapping-does-not-match,troubleshooting,batchsize
+SqlBulkCopy - Examples,examples,examples,
+SqlBulkCopy - FAQ,faq,faq
+SqlBulkCopy - Limitations,limitations,
+SqlBulkCopy - Troubleshooting,troubleshooting,troubleshooting,
+SqlBulkCopy - Execution Timeout Expired. The timeout period elapsed prior to completion of the operation or the server is not responding.,timeout-expired,troubleshooting,

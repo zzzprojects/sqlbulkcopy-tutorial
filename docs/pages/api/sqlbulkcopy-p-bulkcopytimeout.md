@@ -18,7 +18,7 @@ using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString))
     // SET BulkCopyTimeout value.
     bulkCopy.BulkCopyTimeout = 300;
 
-    // ...ColumnMappings &  Options...
+    // ...ColumnMappings & Options...
     bulkCopy.WriteToServer(dt);
 }
 {% endhighlight %}

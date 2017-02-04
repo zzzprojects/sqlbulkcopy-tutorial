@@ -15,9 +15,10 @@ True to enable streaming for IDataReader object.
 {% highlight csharp %}
 using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString))
 {
-	// SET the BatchSize.
-	bulkCopy.BatchSize = 50;
-	
-	// ...code...
+    // SET EnableStreaming value.
+    bulkCopy.EnableStreaming = true;
+
+    // ...ColumnMappings & Options...
+    bulkCopy.WriteToServer(reader);
 }
 {% endhighlight %}

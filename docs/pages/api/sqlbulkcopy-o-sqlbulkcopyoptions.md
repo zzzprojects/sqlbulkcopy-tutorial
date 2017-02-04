@@ -38,7 +38,6 @@ using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperat
 {
     using (var bulkCopy = new SqlBulkCopy(connection, SqlBulkCopyOptions.CheckConstraints | SqlBulkCopyOptions.FireTriggers, null))
     {
-
         bulkCopy.BatchSize = 4000;
         bulkCopy.DestinationTableName = "TheDestinationTable";
         bulkCopy.WriteToServer(dt);

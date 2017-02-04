@@ -14,6 +14,6 @@ SqlBulkCopy - Timeout Expired,timeout-expired,troubleshooting,
 SqlBulkCopy - Column Mapping...,columnmapping-does-not-match,troubleshooting,
 SqlBulkCopy - Examples,examples,examples,
 SqlBulkCopy - FAQ,faq,faq
-SqlBulkCopy - Limitations,limitations,
+SqlBulkCopy - Limitations,limitations,limitations,
 SqlBulkCopy - Troubleshooting,troubleshooting,troubleshooting,
 SqlBulkCopy - Execution Timeout Expired. The timeout period elapsed prior to completion of the operation or the server is not responding.,timeout-expired,troubleshooting,

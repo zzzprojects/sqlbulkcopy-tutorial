@@ -24,7 +24,7 @@ If you need to INSERT 250 rows with a BatchSize of 100, 3 batchs will be sent to
 using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString))
 {
     // SET BatchSize value.
-    bulkCopy.BatchSize = 50;
+    bulkCopy.BatchSize = 4000;
 
     // ...ColumnMappings & Options...
     bulkCopy.WriteToServer(dt);

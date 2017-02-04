@@ -15,9 +15,10 @@ Number of seconds maximum for a batch before it times out.
 {% highlight csharp %}
 using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString))
 {
-	// SET the BatchSize.
-	bulkCopy.BatchSize = 50;
-	
-	// ...code...
+    // SET BulkCopyTimeout value.
+    bulkCopy.BulkCopyTimeout = 300;
+
+    // ...ColumnMappings &  Options...
+    bulkCopy.WriteToServer(dt);
 }
 {% endhighlight %}

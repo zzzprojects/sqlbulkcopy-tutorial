@@ -15,9 +15,11 @@ Mapping between the source and destination columns.
 {% highlight csharp %}
 using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString))
 {
-	// SET the BatchSize.
-	bulkCopy.BatchSize = 50;
-	
-	// ...code...
+    // SET ColumnMappings values.
+    bulkCopy.ColumnMappings.Add("TheColumnInt", "TheColumnInt");
+    bulkCopy.ColumnMappings.Add("TheColumnString", "TheColumnString");
+
+    // ...ColumnMappings &  Options...
+    bulkCopy.WriteToServer(dt);
 }
 {% endhighlight %}

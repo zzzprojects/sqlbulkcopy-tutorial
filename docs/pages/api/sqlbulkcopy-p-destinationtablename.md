@@ -15,9 +15,10 @@ Name of the destination table.
 {% highlight csharp %}
 using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString))
 {
-	// SET the BatchSize.
-	bulkCopy.BatchSize = 50;
-	
-	// ...code...
+    // SET DestinationTableName value.
+    bulkCopy.DestinationTableName = "TheDestinationTable";
+
+    // ...ColumnMappings & Options...
+    bulkCopy.WriteToServer(dt);
 }
 {% endhighlight %}

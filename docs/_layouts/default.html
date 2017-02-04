@@ -113,7 +113,7 @@ header .navbar .active {
 				<article>
 	{% for num in (0..site.data.pages.size) %}
 	    {% assign page2 = site.data.pages[num] %}
-	    {% if page2.url == page.pages %}
+	    {% if page2.url == page.permalink %}
 		{% assign next_i = forloop.index0 | plus: 1 %}
 		{% assign prev_i = forloop.index0 | minus: 2 %}
 

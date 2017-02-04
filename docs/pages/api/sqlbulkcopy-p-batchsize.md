@@ -26,7 +26,7 @@ using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString))
     // SET BatchSize value.
     bulkCopy.BatchSize = 50;
 
-    // ...ColumnMapping & Options...
+    // ...ColumnMappings & Options...
     bulkCopy.WriteToServer(dt);
 }
 {% endhighlight %}

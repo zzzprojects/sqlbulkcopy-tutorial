@@ -111,13 +111,13 @@ header .navbar .active {
 				<div><img src="images/entity-framework-extensions.jpg" /></div>
 				<br />
 				<article>
-	{% for num in (0..site.data.permalink.size) %}
-	    {% assign page2 = site.data.permalink[num] %}
-	    {% if page2.permalink == page.permalink %}
+	{% for num in (0..site.data.pages.size) %}
+	    {% assign page2 = site.data.pages[num] %}
+	    {% if page2.permalink == page.pages %}
 		{% assign next_i = forloop.index0 | plus: 1 %}
 		{% assign prev_i = forloop.index0 | minus: 2 %}
 
-		{% if next_i == site.data.permalink[num] %}
+		{% if next_i == site.data.pages[num] %}
 		    {% assign next_i = 1 %}
 		{% endif %}
 	    {% endif %}
@@ -125,10 +125,10 @@ header .navbar .active {
 
 <nav class="pagination row">
     <div class="previous col flex-first">
-        <a href="{{ site.data.permalink[prev_i].permalink }}" class="btn btn-primary" role="button">Previous</a>
+        <a href="{{ site.data.pages[prev_i].url }}" class="btn btn-primary" role="button">Previous</a>
     </div>
     <div class="next col flex-last text-right">
-        <a href="{{ site.data.permalink[next_i].permalink }}" class="btn btn-primary" role="button">Next</a>
+        <a href="{{ site.data.pages[next_i].url }}" class="btn btn-primary" role="button">Next</a>
     </div>
 </nav>				
 					
@@ -138,10 +138,10 @@ header .navbar .active {
 
 <nav class="pagination row">
     <div class="previous col flex-first">
-        <a href="{{ site.data.permalink[prev_i].permalink }}" class="btn btn-primary" role="button">Previous</a>
+        <a href="{{ site.data.pages[prev_i].url }}" class="btn btn-primary" role="button">Previous</a>
     </div>
     <div class="next col flex-last text-right">
-        <a href="{{ site.data.permalink[next_i].permalink }}" class="btn btn-primary" role="button">Next</a>
+        <a href="{{ site.data.pages[next_i].url }}" class="btn btn-primary" role="button">Next</a>
     </div>
 </nav>		
 			</article>

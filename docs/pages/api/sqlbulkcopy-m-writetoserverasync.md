@@ -15,9 +15,9 @@ The asynchronous version of WriteToServer. Copy all rows from the source to the 
 {% highlight csharp %}
 using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString))
 {
-	// SET the BatchSize.
-	bulkCopy.BatchSize = 50;
-	
-	// ...code...
+    // ...ColumnMappings & Options...
+    
+    // CALL WriteToServerAsync method.
+    bulkCopy.WriteToServerAsync(dt, cancellationToken);
 }
 {% endhighlight %}

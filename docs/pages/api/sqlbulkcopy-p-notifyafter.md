@@ -17,9 +17,12 @@ something else...
 {% highlight csharp %}
 using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString))
 {
-	// SET the BatchSize.
-	bulkCopy.BatchSize = 50;
-	
-	// ...code...
+    // SET NotifyAfter value.
+    bulkCopy.NotifyAfter = 4000;
+
+    bulkCopy.SqlRowsCopied += (sender, args) => { /* code */ };
+
+    // ...ColumnMappings & Options...
+    bulkCopy.WriteToServer(reader);
 }
 {% endhighlight %}

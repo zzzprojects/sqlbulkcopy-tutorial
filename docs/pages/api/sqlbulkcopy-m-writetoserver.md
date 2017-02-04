@@ -14,9 +14,9 @@ Copy all rows from the source to the destination table.
 {% highlight csharp %}
 using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString))
 {
-	// SET the BatchSize.
-	bulkCopy.BatchSize = 50;
-	
-	// ...code...
+    // ...ColumnMappings & Options...
+    
+    // CALL WriteToServer method.
+    bulkCopy.WriteToServer(reader);
 }
 {% endhighlight %}

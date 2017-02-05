@@ -19,7 +19,7 @@ using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString))
     bulkCopy.ColumnMappings.Add("TheColumnInt", "TheColumnInt");
     bulkCopy.ColumnMappings.Add("TheColumnString", "TheColumnString");
 
-    // ...ColumnMappings & Options...
+    bulkCopy.DestinationTableName = "TheDestinationTable";
     bulkCopy.WriteToServer(dt);
 }
 {% endhighlight %}

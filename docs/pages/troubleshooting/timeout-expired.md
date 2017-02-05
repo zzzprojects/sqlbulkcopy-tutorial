@@ -23,7 +23,9 @@ using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperat
 
     using (var bulkCopy = new SqlBulkCopy(connection))
     {
+        // SET BulkCopyTimeout value.
         bulkCopy.BulkCopyTimeout = bulkCopyTimeout;
+        
         bulkCopy.DestinationTableName = destinationName;
         bulkCopy.WriteToServer(dt);
     }

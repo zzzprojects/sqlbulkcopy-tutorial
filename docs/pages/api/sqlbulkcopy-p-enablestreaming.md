@@ -18,7 +18,7 @@ using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString))
     // SET EnableStreaming value.
     bulkCopy.EnableStreaming = true;
 
-    // ...ColumnMappings & Options...
+    bulkCopy.DestinationTableName = "TheDestinationTable";
     bulkCopy.WriteToServer(reader);
 }
 {% endhighlight %}

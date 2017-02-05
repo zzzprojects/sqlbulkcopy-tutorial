@@ -19,6 +19,22 @@ using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperat
     // Oops! The connection has never been opened
     // connection.Open();
 
+    using (var bulkCopy = new SqlBulkCopy(connection))
+    {
+        bulkCopy.BatchSize = 4000;
+        bulkCopy.DestinationTableName = "TheDestinationTable";
+        bulkCopy.WriteToServer(dt);
+    }
+}
+{% endhighlight %}
+
+{% include template-example.html %} 
+{% highlight csharp %}
+using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperations))
+{
+    // Oops! The connection has never been opened
+    // connection.Open();
+
     foreach (DataTable dt in ds.Tables)
     {
         using (var bulkCopy = new SqlBulkCopy(connection))

@@ -14,7 +14,7 @@ permalink: timeout-expired
 
 {% include template-example.html %} 
 {% highlight csharp %}
-// Oops! The specified timeout may be a little bit to low!
+// Oops! The specified bulkCopyTimeout value is to low!
 bulkCopyTimeout = 1;
 
 using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperations))

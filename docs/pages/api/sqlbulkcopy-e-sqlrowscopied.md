@@ -20,7 +20,7 @@ using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString))
     
     bulkCopy.NotifyAfter = 4000;
 
-    // ...ColumnMappings & Options...
+    bulkCopy.DestinationTableName = "TheDestinationTable";
     bulkCopy.WriteToServer(reader);
 }
 {% endhighlight %}

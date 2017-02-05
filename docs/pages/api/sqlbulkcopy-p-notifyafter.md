@@ -22,7 +22,7 @@ using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString))
 
     bulkCopy.SqlRowsCopied += (sender, args) => { /* code */ };
 
-    // ...ColumnMappings & Options...
+    bulkCopy.DestinationTableName = "TheDestinationTable";
     bulkCopy.WriteToServer(reader);
 }
 {% endhighlight %}

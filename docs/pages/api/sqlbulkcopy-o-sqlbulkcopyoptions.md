@@ -32,12 +32,4 @@ var options = SqlBulkCopyOptions.CheckConstraints | SqlBulkCopyOptions.FireTrigg
 
 
 ## Examples
-{% include template-example.html %} 
-{% highlight csharp %}
-// SET SqlBulkCopyOptions value.
-using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString, SqlBulkCopyOptions.CheckConstraints | SqlBulkCopyOptions.FireTriggers))
-{
-    bulkCopy.DestinationTableName = "TheDestinationTable";
-    bulkCopy.WriteToServer(dt);
-}
-{% endhighlight %}
+test

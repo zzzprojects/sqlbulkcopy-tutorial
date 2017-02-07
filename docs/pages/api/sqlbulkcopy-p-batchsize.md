@@ -26,6 +26,7 @@ If you only have a few hundreds of rows, that's not an issue. But when you start
 - Decrease SqlBulkCopy performance
 - Increase the chance to get a Timeout Expired exception
 - Increase the chance to get an OutOfMemory exception
+- Impact server performance
 
 There is no BatchSize value which exists that will fit in all scenarios.
 
@@ -37,8 +38,10 @@ There is no BatchSize value which exists that will fit in all scenarios.
 
 Why do we recommend a SqlBulkCopy BatchSize value of 4000?
 
-- Not to low
-- Not to high
+- The value is not to high
+- The value is not to low
+
+There is a lot of article
 
 ### Use a Transaction
 By default, SqlBulkCopy do not use a transaction.

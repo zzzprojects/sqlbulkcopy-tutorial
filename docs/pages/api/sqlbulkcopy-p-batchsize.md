@@ -41,7 +41,7 @@ Why do we recommend a SqlBulkCopy BatchSize value of 4000?
 - The value is not to high
 - The value is not to low
 
-There is a lot of article
+You may find a lot of articles about the recommended batch size. Some people will recommand 1000, 2000, 5000, etc. but all will end up...
 
 ### Use a Transaction
 By default, SqlBulkCopy do not use a transaction.

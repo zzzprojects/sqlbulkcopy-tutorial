@@ -17,13 +17,16 @@ Number of rows for a batch.
 - USE a Transaction
 
 ### SET a BatchSize value
+
+The SqlBulkCopy BatchSize value we recommend is: 4000
+
 By default, SqlBulkCopy will process the operation in a single batch. If you have 100000 rows to copy, 100000 rows will be copied at once.
 
-If you only have a few hundreds of rows, that's not an issue. But when you start to have thousands of row, you will start to lose some performance.
+If you only have a few hundreds of rows, that's not an issue. But when you start to have thousands of row, you will start to lose performance.
 
 There is no BatchSize value which exists that will fit in all scenarios.
 
-We recommend using a BatchSize value of around 5000
+
 
 {% include template-example.html %} 
 {% highlight csharp %}

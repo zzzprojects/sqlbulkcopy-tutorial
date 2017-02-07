@@ -22,7 +22,7 @@ Number of rows for a batch.
  
 {% include template-example.html %} 
 {% highlight csharp %}
-    bulkCopy.BatchSize = 4000;
+bulkCopy.BatchSize = 4000;
 {% endhighlight %}
 
 By default, SqlBulkCopy will process the operation in a single batch. If you have 100000 rows to copy, 100000 rows will be copied at once.
@@ -45,6 +45,15 @@ There is no value that fit all scenarios. Some people will recommend a BatchSize
 ### Use a Transaction
 
 - We recommend to use your transaction
+
+{% include template-example.html %} 
+{% highlight csharp %}
+using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString, transaction))
+{
+   // ...code...
+}
+{% endhighlight %}
+
 
 By default, SqlBulkCopy do not use a transaction. So if a batch fail, there is no rollback of all rows already processed from previous batch.
 

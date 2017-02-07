@@ -1,7 +1,7 @@
 ---
 layout: default
 title: SqlBulkCopy EnableStreaming
-permalink: enablestreaming
+permalink: sqlbulkcopy-enablestreaming
 ---
 
 {% include template-h1.html %}

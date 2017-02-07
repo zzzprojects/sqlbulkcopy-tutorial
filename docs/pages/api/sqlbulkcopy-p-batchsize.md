@@ -32,7 +32,22 @@ If you need to INSERT 250 rows with a BatchSize of 100, 3 batchs will be sent to
 ### SET a BatchSize
 By default, SqlBulkCopy will process the operation in a single batch.
 
-That's not an issue if you process only a hundred or row but when you process millions of row, you will lose a lot of performance.
+If you only have a few hundreds of rows, that's not an issue. But when you start to have thousands of row, you will start to lose some performance.
+
+There is no BatchSize value which exists that will fit in all scenarios.
+
+We recommend using a BatchSize value of around 5000
+
+{% include template-example.html %} 
+{% highlight csharp %}
+    bulkCopy.BatchSize = 4000;
+}
+{% endhighlight %}
+
+Why do we recommend a SqlBulkCopy BatchSize value of 4000?
+
+- Not to low
+- Not to high
 
 ### Use a Transaction
 By default, SqlBulkCopy do not use a transaction.

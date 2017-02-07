@@ -22,7 +22,10 @@ The SqlBulkCopy BatchSize value we recommend is: 4000
 
 By default, SqlBulkCopy will process the operation in a single batch. If you have 100000 rows to copy, 100000 rows will be copied at once.
 
-If you only have a few hundreds of rows, that's not an issue. But when you start to have thousands of row, you will start to lose performance.
+If you only have a few hundreds of rows, that's not an issue. But when you start to have thousands of row:
+- Decrease SqlBulkCopy performance
+- Increase the chance to get a Timeout Expired exception
+- Increase the chance to get an OutOfMemory exception
 
 There is no BatchSize value which exists that will fit in all scenarios.
 

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: SqlBulkCopy DestinationTableName
-permalink: destinationtablename
+permalink: sqlbulkcopy-destinationtablename
 ---
 
 {% include template-h1.html %}

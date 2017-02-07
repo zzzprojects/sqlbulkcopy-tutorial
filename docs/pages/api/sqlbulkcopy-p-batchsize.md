@@ -27,7 +27,19 @@ If you need to INSERT 250 rows with a BatchSize of 100, 3 batchs will be sent to
 
 ## Recommendation
 - SET a BatchSize value of around 5,000 (not to low, not to high!)
-- USE a transaction if you specify a BatchSize
+- USE a Transaction if you specify a BatchSize
+
+### SET a BatchSize
+By default, SqlBulkCopy will process the operation in a single batch.
+
+That's not an issue if you process only a hundred or row but when you process millions of row, you will lose a lot of performance.
+
+### Use a Transaction
+By default, SqlBulkCopy do not use a transaction.
+
+If set UseInternalTransaction option to true, a transaction will be created for every batch, which is not the optimized solution either.
+
+The best solution, is creating and handling yourself the transaction.
 
 ## Example
 {% include template-example.html %} 

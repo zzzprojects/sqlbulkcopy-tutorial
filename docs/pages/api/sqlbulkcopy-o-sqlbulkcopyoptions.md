@@ -1,7 +1,7 @@
 ---
 layout: default
 title: SqlBulkCopy - SqlBulkCopyOptions
-permalink: sqlbulkcopyoptions
+permalink: sqlbulkcopy-sqlbulkcopyoptions
 ---
 
 {% include template-h1.html %}

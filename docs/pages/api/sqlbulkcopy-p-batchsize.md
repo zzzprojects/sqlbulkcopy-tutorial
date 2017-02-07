@@ -13,10 +13,10 @@ Number of rows for a batch.
 - Default Value: 0 _(Unlimited)_
 
 ## Recommendation
-- SET a BatchSize value of around 5,000 (not to low, not to high!)
-- USE a Transaction if you specify a BatchSize
+- SET a BatchSize value
+- USE a Transaction
 
-### SET a BatchSize
+### SET a BatchSize value
 By default, SqlBulkCopy will process the operation in a single batch. If you have 100000 rows to copy, 100000 rows will be copied at once.
 
 If you only have a few hundreds of rows, that's not an issue. But when you start to have thousands of row, you will start to lose some performance.

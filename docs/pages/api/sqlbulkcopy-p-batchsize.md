@@ -1,7 +1,7 @@
 ---
 layout: default
 title: SqlBulkCopy BatchSize
-permalink: sqlbulkcopy-batchsize
+permalink: batchsize
 ---
 
 {% include template-h1.html %}

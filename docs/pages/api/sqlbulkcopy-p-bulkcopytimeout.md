@@ -1,7 +1,7 @@
 ---
 layout: default
 title: SqlBulkCopy BulkCopyTimeout
-permalink: bulkcopytimeout
+permalink: sqlbulkcopy-bulkcopytimeout
 ---
 
 {% include template-h1.html %}

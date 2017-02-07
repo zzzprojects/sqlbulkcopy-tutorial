@@ -1,7 +1,7 @@
 ---
 layout: default
 title: SqlBulkCopy ColumnMappings
-permalink: columnmappings
+permalink: sqlbulkcopy-columnmappings
 ---
 
 {% include template-h1.html %}

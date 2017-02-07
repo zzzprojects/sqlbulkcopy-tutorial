@@ -28,7 +28,6 @@ We recommend using a BatchSize value of around 5000
 {% include template-example.html %} 
 {% highlight csharp %}
     bulkCopy.BatchSize = 4000;
-}
 {% endhighlight %}
 
 Why do we recommend a SqlBulkCopy BatchSize value of 4000?

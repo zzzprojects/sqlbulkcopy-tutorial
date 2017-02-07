@@ -1,7 +1,7 @@
 ---
 layout: default
 title: SqlBulkCopy NotifyAfter
-permalink: sqlbulkcopy-notifyafter
+permalink: notifyafter
 ---
 
 {% include template-h1.html %}

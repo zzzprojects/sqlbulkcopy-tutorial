@@ -19,29 +19,28 @@ Number of rows for a batch.
 ### SET a BatchSize value
 
  - Recommended BatchSize Value: **4000**
-
-By default, SqlBulkCopy will process the operation in a single batch. If you have 100000 rows to copy, 100000 rows will be copied at once.
-
-If you only have a few hundreds of rows, that's not an issue. But when you start to have thousands of rows:
-- Decrease SqlBulkCopy performance
-- Increase the chance to get a Timeout Expired exception
-- Increase the chance to get an OutOfMemory exception
-- Impact server performance
-
-There is no BatchSize value which exists that will fit in all scenarios.
-
-
+ 
 {% include template-example.html %} 
 {% highlight csharp %}
     bulkCopy.BatchSize = 4000;
 {% endhighlight %}
 
-Why do we recommend a SqlBulkCopy BatchSize value of 4000?
+By default, SqlBulkCopy will process the operation in a single batch. If you have 100000 rows to copy, 100000 rows will be copied at once.
+
+Not specifying a BatchSize can impact your application:
+
+- Decrease SqlBulkCopy performance
+- Increase the chance to get a Timeout Expired exception
+- Increase the chance to get an OutOfMemory exception
+- Impact server performance
+- Impact database server performance
+
+#### Why do we recommend a SqlBulkCopy BatchSize value of 4000?
 
 - The value is not to high
 - The value is not to low
 
-You may find a lot of articles about the recommended batch size. Some people will recommand 1000, 2000, 5000, etc. but all will end up...
+There is no value that fit all scenarios. Some people will recommend a BatchSize of 1000, 2000, or 5000 and they are all good values which fit in the rule "not to high, not to low". All these value will have slighty performance difference which is sometime better or worse.
 
 ### Use a Transaction
 By default, SqlBulkCopy do not use a transaction.

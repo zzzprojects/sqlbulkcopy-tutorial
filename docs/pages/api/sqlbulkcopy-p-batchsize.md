@@ -43,11 +43,14 @@ Not specifying a BatchSize can impact your application:
 There is no value that fit all scenarios. Some people will recommend a BatchSize of 1000, 2000, or 5000 and they are all good values which fit in the rule "not to high, not to low". All these value will have slighty performance difference which is sometime better or worse.
 
 ### Use a Transaction
-By default, SqlBulkCopy do not use a transaction.
 
-If set UseInternalTransaction option to true, a transaction will be created for every batch, which is not the optimized solution either.
+- We recommend to use your transaction
 
-The best solution, is creating and handling yourself the transaction.
+By default, SqlBulkCopy do not use a transaction. So if a batch fail, there is no rollback of all rows already processed from previous batch.
+
+If you set the UseInternalTransaction option to true, a transaction will be created for every batch. Again, if a batch fail, there is no rollback of all rows already processed from previous batch.
+
+The best solution, is creating your own transaction.
 
 ## Example
 {% include template-example.html %} 

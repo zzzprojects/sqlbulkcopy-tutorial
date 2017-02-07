@@ -30,3 +30,6 @@ using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString))
     bulkCopy.WriteToServer(dt);
 }
 {% endhighlight %}
+
+## Recommendation
+- SET a BatchSize value of around 5,000 (not to low, not to high!)

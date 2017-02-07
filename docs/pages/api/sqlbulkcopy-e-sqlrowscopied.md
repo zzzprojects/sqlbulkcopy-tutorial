@@ -1,7 +1,7 @@
 ---
 layout: default
 title: SqlBulkCopy SqlRowCopied
-permalink: sqlbulkcopy-sqlrowscopied
+permalink: sqlrowscopied
 ---
 
 {% include template-h1.html %}

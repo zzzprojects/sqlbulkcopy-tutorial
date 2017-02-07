@@ -1,7 +1,7 @@
 ---
 layout: default
 title: SqlBulkCopy WriteToServerAsync
-permalink: writetoserverasync
+permalink: sqlbulkcopy-writetoserverasync
 ---
 
 {% include template-h1.html %}

@@ -44,12 +44,12 @@ var options = SqlBulkCopyOptions.CheckConstraints | SqlBulkCopyOptions.FireTrigg
 - SET CheckConstraints ON
 - SET FireTriggers ON
 
-### CheckConstraints ON
+### SET CheckConstraints ON
 By default, SqlBulkCopy doesn't check constraint like default value.
 
 Your table doesn't any constraint? It takes one second to be safe forever...
 
-### FireTriggers ON
+### SET FireTriggers ON
 By default, SqlBulkCopy doesn't check trigger.
 
 Your table doesn't any trigger? It takes one second to be safe forever...

@@ -5,6 +5,19 @@ permalink: sqlbulkcopy
 ---
 
 {% include template-h1.html %}
+Fastest way to insert multiples row from a data source to a SQL Server/Azure.
+
+{% include template-example.html %} 
+{% highlight csharp %}
+using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString, transaction))
+{
+    // SET BatchSize value.
+    bulkCopy.BatchSize = 4000;
+
+    bulkCopy.DestinationTableName = "TheDestinationTable";
+    bulkCopy.WriteToServer(dt);
+}
+{% endhighlight %}
 
 {% include begin-block-h2.html title='Options' %}
 <table class="table table-striped table-hover table-responsive">

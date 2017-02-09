@@ -12,7 +12,6 @@ Number of rows for a batch.
 - Type: System.Int32
 - Default Value: 0 _(Unlimited)_
 
-## Example
 {% include template-example.html %} 
 {% highlight csharp %}
 using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString, transaction))

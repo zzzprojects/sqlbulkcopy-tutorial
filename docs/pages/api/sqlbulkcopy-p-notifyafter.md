@@ -10,9 +10,9 @@ permalink: notifyafter
 
 Number of rows to process before raising the SqlRowsCopied events.
 
-something else...
+- Type: System.Int32
+- Default Value: 0 (None)
 
-## Example
 {% include template-example.html %} 
 {% highlight csharp %}
 using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString))

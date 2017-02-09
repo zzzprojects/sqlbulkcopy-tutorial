@@ -10,6 +10,9 @@ permalink: enablestreaming
 
 True to enable streaming for IDataReader object.
 
+- Type: System.Boolean
+- Default Value: false
+
 ## Example
 {% include template-example.html %} 
 {% highlight csharp %}

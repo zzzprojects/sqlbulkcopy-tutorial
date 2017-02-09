@@ -9,6 +9,16 @@ permalink: sqlbulkcopyoptions
 ## Description
 Bitwise flag that specifies one or more options.
 
+{% include template-example.html %} 
+{% highlight csharp %}
+// SET SqlBulkCopyOptions value.
+using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString, SqlBulkCopyOptions.CheckConstraints | SqlBulkCopyOptions.FireTriggers))
+{
+	bulkCopy.DestinationTableName = "TheDestinationTable";
+    bulkCopy.WriteToServer(dt);
+}
+{% endhighlight %}
+
 ## Options
 
 | Name | Default | Description |
@@ -30,14 +40,16 @@ You can specify more than one value by using the "|" operators (Logical OR).
 var options = SqlBulkCopyOptions.CheckConstraints | SqlBulkCopyOptions.FireTriggers | SqlBulkCopyOptions.TableLock;
 {% endhighlight %}
 
+## Recommendation
+- SET CheckConstraints ON
+- SET FireTriggers ON
 
-## Examples
-{% include template-example.html %} 
-{% highlight csharp %}
-// SET SqlBulkCopyOptions value.
-using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString, SqlBulkCopyOptions.CheckConstraints | SqlBulkCopyOptions.FireTriggers))
-{
-	bulkCopy.DestinationTableName = "TheDestinationTable";
-    bulkCopy.WriteToServer(dt);
-}
-{% endhighlight %}
+### CheckConstraints ON
+By default, SqlBulkCopy doesn't check constraint like default value.
+
+Your table doesn't any constraint? It takes one second to be safe forever...
+
+### FireTriggers ON
+By default, SqlBulkCopy doesn't check trigger.
+
+Your table doesn't any trigger? It takes one second to be safe forever...

@@ -34,6 +34,6 @@ using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString))
  
 Ensure to set the BulkCopyTimeout to at least 3x of the time the SqlBulkCopy need to complete the transaction.
 
-If the operation may take up to 20s, specify a value at least of 60s.
+If the operation may take up to 20s, specify a value of at least of 60s.
 
 You don't know in one year what could happen! A file importation that started small may have growth to millions of rows. There is nothing worse than an application crashing in production because of a Timeout exception occured!

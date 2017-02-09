@@ -5,7 +5,7 @@ permalink: sqlbulkcopy
 ---
 
 {% include template-h1.html %}
-Fastest way to insert multiples row from a data source to a SQL Server/Azure.
+Fastest way to insert multiples rows from a data source to a SQL Server/Azure.
 
 {% include template-example.html %} 
 {% highlight csharp %}

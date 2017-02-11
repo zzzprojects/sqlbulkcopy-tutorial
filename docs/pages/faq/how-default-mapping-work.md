@@ -49,7 +49,8 @@ First, he will try to map the TransactionId to the DateCreated column in the sou
 
 He will now find a perfect match between TransactionId from the source and InvoiceId from the Destination.
 
-The Final Mapping
+The Final Mapping:
+
 | Source        | Destination |
 | ------------- | ----------- |
 | TransactionId | InvoiceId   |

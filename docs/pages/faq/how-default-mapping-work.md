@@ -24,7 +24,7 @@ dt.Columns.Add("SourceTransactionId", typeof(int));
 dt.Columns.Add("SourceCustomerId", typeof(int));
 {% endhighlight %}
 
-The following SQL table:
+to the following SQL table:
 {% highlight sql %}
 CREATE TABLE DestinationOrder
 (

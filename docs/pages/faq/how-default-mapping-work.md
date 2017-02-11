@@ -39,3 +39,17 @@ internal void CreateDefaultMapping(int columnCount)
 | CustomerId    | Reference |
 | Reference     | CustomerId |
 
+Later the SqlBulkCopy will check...
+
+The OrderId is an identity column in the database.
+
+It will map to the next...
+
+Final Mapping
+| Source | Destination |
+| ------ | ----------- |
+| TransactionId | Something |
+| CustomerId    | Reference |
+| Reference     | CustomerId |
+
+This can lead to multiple weird issue.

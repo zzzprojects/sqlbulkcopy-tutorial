@@ -13,16 +13,28 @@ At first sight yes, but once you understand how it works, you will always map al
 
 ## Under the hood
 
-Let use the following class
+Let use the following C# entity
 {% highlight csharp %}
-public class Order
+public class SourceOrder
 {
-    public int OrderId { get; set; }
-    public int TransactionId { get; set; }
-    public int CustomerId { get; set; }
-    public DateTime DateCreated { get; set; }
-    public int InvoiceId { get; set; }
+    public int SourceOrderId { get; set; }
+    public int SourceTransactionId { get; set; }
+    public int SourceCustomerId { get; set; }
+    public DateTime SourceDateCreated { get; set; }
+    public int SourceInvoiceId { get; set; }
 }
+{% endhighlight %}
+
+and follow SQL table:
+{% highlight sql %}
+CREATE TABLE DestinationOrder
+(
+    SourceOrderId INT IDENTITY(1, 1),
+    SourceTransactionId INT,
+    SourceCustomerId INT,
+    SourceDateCreated DATETIME2,
+    SourceInvoiceId INT
+)
 {% endhighlight %}
 
 The problem is SqlBulkCopy auto map column by ordinal:

@@ -44,7 +44,7 @@ Let say we want to insert only the following column:
 - SourceCustomerId
 
 #### Step 1
-The first step of the default mapping is simply performing an auto-mapping by ordinal without skipping the identity column from the destination.
+The first step of the default mapping is simply performing an auto-mapping by ordinal:
 
 {% highlight csharp %}
 internal void CreateDefaultMapping(int columnCount)

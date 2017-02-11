@@ -14,19 +14,17 @@ At first sight yes, but once you understand how it works, you will always map al
 ## Under the hood
 
 ### Unit of Test
-Let use the following C# entity
+Let use,
+
+The following DataTable to map
 {% highlight csharp %}
-public class SourceOrder
-{
-    public int SourceOrderId { get; set; }
-    public int SourceTransactionId { get; set; }
-    public int SourceCustomerId { get; set; }
-    public DateTime SourceDateCreated { get; set; }
-    public int SourceInvoiceId { get; set; }
-}
+var dt = new DataTable();
+dt.Columns.Add("SourceOrderId", typeof(int));
+dt.Columns.Add("SourceTransactionId", typeof(int));
+dt.Columns.Add("SourceCustomerId", typeof(int));
 {% endhighlight %}
 
-and follow SQL table:
+The following SQL table:
 {% highlight sql %}
 CREATE TABLE DestinationOrder
 (
@@ -81,6 +79,8 @@ The mapping is now:
 | SourceTransactionId | DestinationInvoiceId   |
 | SourceCustomerId    | DestinationReference   |
 | SourceReference     | DestinationCustomerId  |
+
+Without a doubt, this mapping will lead to many error. Wrong source property are mapping to wrong destination column!
 
 ## StackOverflow Reference
 - [SqlBulkCopy giving FOREIGN KEY constraint error](http://stackoverflow.com/questions/39684342/sqlbulkcopy-giving-foreign-key-constraint-error/)

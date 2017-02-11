@@ -6,14 +6,37 @@ permalink: how-default-mapping-work
 
 {% include template-h1.html %}
 
-## Article
+## Description
+Hey SqlBulkCopy can map column automaticality, it's not is great?
 
-_Under Construction! More FAQ will be available soon._
+At first sight yes, but once you understand how it works, you will always map all your columns explicitly!
 
-<ul>
-{% for num in (0..site.data.permalink.size) %}	
-	{% if site.data.permalink[num].category == page.permalink %}
-		<li><a href="{{ site.data.permalink[num].permalink }}">{{ site.data.permalink[num].permalink }}</a></li>
-	{% endif %}
-{% endfor %}
-</ul>
+## Under the hood
+
+```
+{% highlight csharp %}
+public class Order
+{
+    public int OrderId { get; set; }
+    public int TransactionId { get; set; }
+    public int CustomerId { get; set; }
+    public string Reference { get; set; }
+    public int Something { get; set; }
+}
+{% endhighlight %}
+
+
+{% highlight csharp %}
+internal void CreateDefaultMapping(int columnCount)
+{
+  for (int index = 0; index < columnCount; ++index)
+    this.InnerList.Add((object) new SqlBulkCopyColumnMapping(index, index));
+}
+{% endhighlight %}
+
+| Source | Destination |
+| ------ | ----------- |
+| TransactionId | OrderId |
+| CustomerId    | Reference |
+| Reference     | CustomerId |
+

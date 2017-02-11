@@ -1,5 +1,4 @@
 # sqlbulkcopy-tutorial
-SqlBulkCopy Tutorial
 
 ## Roadmap
 - Add basic page

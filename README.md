@@ -1,4 +1,6 @@
 # sqlbulkcopy-tutorial
 SqlBulkCopy Tutorial
 
-_Example project coming soon_
+## Roadmap
+- Add basic page
+- Add example csharp & vb.net project

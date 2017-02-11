@@ -13,7 +13,6 @@ At first sight yes, but once you understand how it works, you will always map al
 
 ## Under the hood
 
-```
 {% highlight csharp %}
 public class Order
 {

@@ -13,17 +13,19 @@ At first sight yes, but once you understand how it works, you will always map al
 
 ## Under the hood
 
+Let use the following class
 {% highlight csharp %}
 public class Order
 {
     public int OrderId { get; set; }
     public int TransactionId { get; set; }
     public int CustomerId { get; set; }
-    public string Reference { get; set; }
-    public int Something { get; set; }
+    public DateTime DateCreated { get; set; }
+    public int InvoiceId { get; set; }
 }
 {% endhighlight %}
 
+The problem is SqlBulkCopy auto map column by ordinal:
 
 {% highlight csharp %}
 internal void CreateDefaultMapping(int columnCount)
@@ -33,23 +35,26 @@ internal void CreateDefaultMapping(int columnCount)
 }
 {% endhighlight %}
 
-| Source | Destination |
-| ------ | ----------- |
-| TransactionId | OrderId |
-| CustomerId    | Reference |
-| Reference     | CustomerId |
+So if your first column in the table is an identity value, here is the mapping by ordinal that will be created:
 
-Later the SqlBulkCopy will check...
+| Source        | Destination   |
+| ------------- | ------------- |
+| TransactionId | OrderId       |
+| CustomerId    | TransactionId |
+| Reference     | CustomerId    |
 
-The OrderId is an identity column in the database.
+Fortunately, later in the code, SqlBulkCopy is enough smart to find out the OrderId is an identity value so he will make the column TransactionId from the source to the next available column matching the type.
 
-It will map to the next...
+First, he will try to map the TransactionId to the DateCreated column in the source, but since the type doesn't match, he will move to the next destination column.
 
-Final Mapping
-| Source | Destination |
-| ------ | ----------- |
-| TransactionId | Something |
-| CustomerId    | Reference |
-| Reference     | CustomerId |
+He will now find a perfect match between TransactionId from the source and InvoiceId from the Destination.
 
-This can lead to multiple weird issue.
+The Final Mapping
+| Source        | Destination |
+| ------------- | ----------- |
+| TransactionId | InvoiceId   |
+| CustomerId    | Reference   |
+| Reference     | CustomerId  |
+
+## StackOverflow Reference
+- [SqlBulkCopy giving FOREIGN KEY constraint error](http://stackoverflow.com/questions/39684342/sqlbulkcopy-giving-foreign-key-constraint-error/)

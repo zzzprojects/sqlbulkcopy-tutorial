@@ -13,6 +13,7 @@ At first sight yes, but once you understand how it works, you will always map al
 
 ## Under the hood
 
+### Unit of Test
 Let use the following C# entity
 {% highlight csharp %}
 public class SourceOrder
@@ -29,15 +30,16 @@ and follow SQL table:
 {% highlight sql %}
 CREATE TABLE DestinationOrder
 (
-    SourceOrderId INT IDENTITY(1, 1),
-    SourceTransactionId INT,
-    SourceCustomerId INT,
-    SourceDateCreated DATETIME2,
-    SourceInvoiceId INT
+    DestinationOrderId INT IDENTITY(1, 1),
+    DestinationTransactionId INT,
+    DestinationCustomerId INT,
+    DestinationDateCreated DATETIME2,
+    DestinationInvoiceId INT
 )
 {% endhighlight %}
 
-The problem is SqlBulkCopy auto map column by ordinal:
+### Problem
+The problem is SqlBulkCopy auto map column by ordinal
 
 {% highlight csharp %}
 internal void CreateDefaultMapping(int columnCount)
@@ -49,11 +51,11 @@ internal void CreateDefaultMapping(int columnCount)
 
 So if your first column in the table is an identity value, here is the mapping by ordinal that will be created:
 
-| Source        | Destination   |
-| ------------- | ------------- |
-| TransactionId | OrderId       |
-| CustomerId    | TransactionId |
-| Reference     | CustomerId    |
+| Source              | Destination   |
+| ------------------- | ------------- |
+| SourceTransactionId | DestinationOrderId       |
+| SourceCustomerId    | DestinationTransactionId |
+| SourceReference     | DestinationCustomerId    |
 
 Fortunately, later in the code, SqlBulkCopy is enough smart to find out the OrderId is an identity value so he will make the column TransactionId from the source to the next available column matching the type.
 
@@ -63,11 +65,11 @@ He will now find a perfect match between TransactionId from the source and Invoi
 
 The Final Mapping:
 
-| Source        | Destination |
-| ------------- | ----------- |
-| TransactionId | InvoiceId   |
-| CustomerId    | Reference   |
-| Reference     | CustomerId  |
+| Source              | Destination |
+| ------------------- | ----------- |
+| SourceTransactionId | DestinationInvoiceId   |
+| SourceCustomerId    | DestinationReference   |
+| SourceReference     | DestinationCustomerId  |
 
 ## StackOverflow Reference
 - [SqlBulkCopy giving FOREIGN KEY constraint error](http://stackoverflow.com/questions/39684342/sqlbulkcopy-giving-foreign-key-constraint-error/)

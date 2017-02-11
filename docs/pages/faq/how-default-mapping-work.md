@@ -39,7 +39,14 @@ CREATE TABLE DestinationOrder
 {% endhighlight %}
 
 ### Problem
-The problem is SqlBulkCopy auto map column by ordinal
+
+Let say we want to insert only the following column:
+- SourceOrderId
+- SourceTransactionId
+- SourceCustomerId
+
+#### Step 1
+The first step of the default mapping is simply performing an auto-mapping by ordinal without skipping the identity column from the destination.
 
 {% highlight csharp %}
 internal void CreateDefaultMapping(int columnCount)
@@ -49,24 +56,28 @@ internal void CreateDefaultMapping(int columnCount)
 }
 {% endhighlight %}
 
-So if your first column in the table is an identity value, here is the mapping by ordinal that will be created:
-
-| Source              | Destination   |
-| ------------------- | ------------- |
+| Source              | Destination              |
+| ------------------- | ------------------------ |
 | SourceTransactionId | DestinationOrderId       |
 | SourceCustomerId    | DestinationTransactionId |
 | SourceReference     | DestinationCustomerId    |
 
-Fortunately, later in the code, SqlBulkCopy is enough smart to find out the OrderId is an identity value so he will make the column TransactionId from the source to the next available column matching the type.
+As you already see, problem is comming. They are already not mapping to the right column!
 
-First, he will try to map the TransactionId to the DateCreated column in the source, but since the type doesn't match, he will move to the next destination column.
+#### Step 2
+The second step will check destination column type and identity column.
 
-He will now find a perfect match between TransactionId from the source and InvoiceId from the Destination.
+The default mapping will discover the DestinationOrderId is an identity column and should not be mapped unless you have the option KeepIdentity turned on.
 
-The Final Mapping:
+The default mapping will try to map the SourceTransactionId to the next column available.
 
-| Source              | Destination |
-| ------------------- | ----------- |
+- It will try to map to SourceDateCreated but the type doesn't match
+- It will try to map to SourceInvoiceId and will find a perfect match!
+
+The mapping is now:
+
+| Source              | Destination            |
+| ------------------- | ---------------------- |
 | SourceTransactionId | DestinationInvoiceId   |
 | SourceCustomerId    | DestinationReference   |
 | SourceReference     | DestinationCustomerId  |

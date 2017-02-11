@@ -54,13 +54,15 @@ internal void CreateDefaultMapping(int columnCount)
 }
 {% endhighlight %}
 
+The maping become:
+
 | Source              | Destination              |
 | ------------------- | ------------------------ |
 | SourceTransactionId | DestinationOrderId       |
 | SourceCustomerId    | DestinationTransactionId |
 | SourceReference     | DestinationCustomerId    |
 
-As you already see, problem is comming. They are already not mapping to the right column!
+Problem is without a doubt coming! Wrong DataTable column are mapped to wrong destination column.
 
 #### Step 2
 The second step will check destination column type and identity column.
@@ -69,8 +71,8 @@ The default mapping will discover the DestinationOrderId is an identity column a
 
 The default mapping will try to map the SourceTransactionId to the next column available.
 
-- It will try to map to SourceDateCreated but the type doesn't match
-- It will try to map to SourceInvoiceId and will find a perfect match!
+- It will try to map to DestinationDateCreated but the type doesn't match
+- It will try to map to DestinationInvoiceId and will find a perfect match!
 
 The mapping is now:
 
@@ -80,7 +82,7 @@ The mapping is now:
 | SourceCustomerId    | DestinationReference   |
 | SourceReference     | DestinationCustomerId  |
 
-Without a doubt, this mapping will lead to many error. Wrong source property are mapping to wrong destination column!
+Without a doubt, this mapping will lead to many error. The most common error is a FOREIGN KEY.
 
 ## StackOverflow Reference
 - [SqlBulkCopy giving FOREIGN KEY constraint error](http://stackoverflow.com/questions/39684342/sqlbulkcopy-giving-foreign-key-constraint-error/)

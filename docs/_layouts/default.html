@@ -49,7 +49,7 @@
 					<li class="nav-item active">
 						<a class="nav-link" href="/"><i class="fa fa-home" aria-hidden="true"></i></a>
 					</li>
-{% if page.path contains "/api/" %} 
+{% if page.path == "default" %} 
    <li class="nav-item active">
 {% else %}
    <li class="nav-item">
@@ -57,16 +57,32 @@
 					
 						<a class="nav-link" href="sqlbulkcopy">API</a>
 					</li>
-					<li class="nav-item">
+{% if page.path contains "/examples/" %} 
+   <li class="nav-item active">
+{% else %}
+   <li class="nav-item">
+{% endif %}
 						<a class="nav-link" href="examples">Examples</a>
 					</li>
-					<li class="nav-item">
+{% if page.path contains "/faq/" %} 
+   <li class="nav-item active">
+{% else %}
+   <li class="nav-item">
+{% endif %}
 						<a class="nav-link" href="faq">FAQ</a>
 					</li>
-					<li class="nav-item">
+{% if page.path contains "/limitations/" %} 
+   <li class="nav-item active">
+{% else %}
+   <li class="nav-item">
+{% endif %}
 						<a class="nav-link" href="limitations">Limitations</a>
 					</li>
-					<li class="nav-item">
+{% if page.path contains "/troubleshooting/" %} 
+   <li class="nav-item active">
+{% else %}
+   <li class="nav-item">
+{% endif %}
 						<a class="nav-link" href="troubleshooting">Troubleshooting</a>
 					</li>
 				</ul>

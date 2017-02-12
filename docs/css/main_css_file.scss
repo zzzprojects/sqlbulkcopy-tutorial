@@ -78,9 +78,12 @@ figure.highlight pre {
 aside .card {
 	font-size: 14px;
 	margin-top: 20px;
+	box-shadow: 10px 10px 10px -10px #333;
+	border-radius: 0px;
 }
 aside .card .card-block {
 	padding: 10px;
+	padding-top: 0px;
 }
 aside .card h3 {
 	font-size: 22px;
@@ -88,6 +91,9 @@ aside .card h3 {
 aside .card h4 {
 	font-size: 18px;
 	margin-bottom: 5px;
+	margin-top: 10px;
+	font-weight: 100;
+	letter-spacing: 0.5px;
 }
 aside .card ul {
 	list-style-type: none;

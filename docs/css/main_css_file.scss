@@ -109,8 +109,8 @@ header li {
 	text-transform: uppercase;
 }
 
-header li a {
-	color: #fff;
+header .navbar-inverse .navbar-nav .nav-link {
+	color: rgba(255, 255, 255, 1);
 }
 
 header {

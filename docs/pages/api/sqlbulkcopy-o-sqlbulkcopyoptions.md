@@ -23,12 +23,12 @@ using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString, SqlBulkCopyOptio
 
 | Name | Default | Description |
 | ---- | :-----: | ----------- |
-| AllowEncryptedValueModifications | No | Allow for always encrypted |
-| CheckConstraints | No |  Check constraints while data is being inserted. By default, constraints are not checked. |
+| AllowEncryptedValueModifications | No | Allow bulk copying encrypting data. |
+| CheckConstraints | No |  Check constraints while data is being inserted. |
 | Default | Yes | Default options = None. |
-| FireTriggers | No |  When specified, cause the server to fire the insert triggers for the rows being inserted into the database. By default, triggers are not fired. |
-| KeepIdentity | No | Preserve source identity values. When not specified, identity values are assigned by the destination. |
-| KeepNulls | No | 	Preserve null values in the destination table regardless of the settings for default values. When not specified, null values are replaced by default values where applicable. |
+| FireTriggers | No |  Fire triggers while data is being inserted. |
+| KeepIdentity | No | Preserve source identity values.. |
+| KeepNulls | No | Preserve null values in the destination table regardless of the settings for default values. When not specified, null values are replaced by default values where applicable. |
 | TableLock | No | Obtain a bulk update lock for the duration of the bulk copy operation. When not specified, row locks are used. |
 | UseInternalTransaction | No | When specified, each batch of the bulk-copy operation will occur within a transaction. |
 

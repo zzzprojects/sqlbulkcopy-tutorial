@@ -7,7 +7,7 @@ permalink: sqlbulkcopyoptions
 {% include template-h1.html %}
 
 ## Description
-Bitwise flag that specifies one or more options.
+Bitwise flag to specifies one or more options.
 
 {% include template-example.html %} 
 {% highlight csharp %}

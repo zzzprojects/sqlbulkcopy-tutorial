@@ -47,7 +47,7 @@ var options = SqlBulkCopyOptions.CheckConstraints | SqlBulkCopyOptions.FireTrigg
 ### SET CheckConstraints ON
 By default, SqlBulkCopy doesn't check constraint.
 
-It's recommanded to always check constraint.
+It's recommanded to always check constraint even if your table have currently none.
 
 ### SET FireTriggers ON
 By default, SqlBulkCopy doesn't check trigger.

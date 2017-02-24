@@ -47,7 +47,7 @@ using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString, transaction))
 		</tr>
 		<tr>
 			<td><a href='bulkcopytimeout'>BulkCopyTimeout</a></td>
-			<td>Number of seconds maximum for a batch before it times out.</td>
+			<td>Number of seconds maximum a batch can take before it times out.</td>
 		</tr>
 		<tr>
 			<td><a href='columnmappings'>ColumnMappings</a></td>

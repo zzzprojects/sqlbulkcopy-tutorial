@@ -97,7 +97,7 @@ using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString, transaction))
 	<tbody>
 		<tr>
 			<td><a href='sqlrowscopied'>SqlRowsCopied</a></td>
-			<td>Even raised after the number of row in the NotifyAfter has been processed.</td>
+			<td>Event raised after the number of row in the NotifyAfter has been processed.</td>
 		</tr>
 	</tbody>
 </table>

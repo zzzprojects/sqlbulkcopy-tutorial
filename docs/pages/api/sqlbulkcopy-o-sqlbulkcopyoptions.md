@@ -15,7 +15,7 @@ Bitwise flag to specifies one or more options.
 using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString, SqlBulkCopyOptions.CheckConstraints | SqlBulkCopyOptions.FireTriggers))
 {
 	bulkCopy.DestinationTableName = "TheDestinationTable";
-    bulkCopy.WriteToServer(dt);
+	bulkCopy.WriteToServer(dt);
 }
 {% endhighlight %}
 

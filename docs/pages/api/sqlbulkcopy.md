@@ -28,7 +28,7 @@ using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString, transaction))
 	<tbody>
 		<tr>
 			<td><a href='batchsize'>SqlBulkCopyOptions</a></td>
-			<td>Bitwise flag that specifies one or more options.</td>
+			<td>Bitwise flag to specifies one or more options.</td>
 		</tr>
 	</tbody>
 </table>

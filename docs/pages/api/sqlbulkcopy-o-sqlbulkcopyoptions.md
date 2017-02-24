@@ -27,7 +27,7 @@ using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString, SqlBulkCopyOptio
 | CheckConstraints | No |  Check constraints while data is being inserted. |
 | Default | Yes | Default options = None. |
 | FireTriggers | No |  Fire triggers while data is being inserted. |
-| KeepIdentity | No | Preserve source identity values.. |
+| KeepIdentity | No | Preserve source identity values. |
 | KeepNulls | No | Preserve null values in the destination table regardless of the settings for default values. When not specified, null values are replaced by default values where applicable. |
 | TableLock | No | Obtain a bulk update lock for the duration of the bulk copy operation. When not specified, row locks are used. |
 | UseInternalTransaction | No | When specified, each batch of the bulk-copy operation will occur within a transaction. |
@@ -45,11 +45,11 @@ var options = SqlBulkCopyOptions.CheckConstraints | SqlBulkCopyOptions.FireTrigg
 - SET FireTriggers ON
 
 ### SET CheckConstraints ON
-By default, SqlBulkCopy doesn't check constraint like default value.
+By default, SqlBulkCopy doesn't check constraint.
 
-Your table doesn't any constraint? It takes one second to be safe forever...
+It's recommanded to always check constraint.
 
 ### SET FireTriggers ON
 By default, SqlBulkCopy doesn't check trigger.
 
-Your table doesn't any trigger? It takes one second to be safe forever...
+It's recommanded to always fire trigger even if your table have currently none.

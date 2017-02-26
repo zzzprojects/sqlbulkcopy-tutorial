@@ -1,6 +1,9 @@
 ---
 layout: default
+title: SqlBulkCopy Tutorials & Examples | C# & VB.NET
 ---
+
+<h1 class="text-center" style="margin-bottom: 60px; font-size: 60px">SqlBulkCopy Tutorials & Examples</h1>
 
 <div class="row">
 	<div class="col-md-6 col-lg-4">

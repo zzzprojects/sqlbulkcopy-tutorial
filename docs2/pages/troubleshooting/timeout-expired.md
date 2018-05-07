@@ -4,7 +4,7 @@
 
 You execute the method WriteToServer, and the following error is thrown:
 
-> Execution Timeout Expired. The timeout period elapsed prior to completion of the operation or the server is not responding.'
+> Execution Timeout Expired. The timeout period elapsed prior to completion of the operation or the server is not responding.
 
 ```csharp
 // Oops! The specified bulkCopyTimeout value is to low!

@@ -4,7 +4,7 @@
 
 You execute the method WriteToServer, and the following error is thrown:
 
-> The DestinationTableName property must be set before calling this method.'
+> The DestinationTableName property must be set before calling this method.
 
 ```csharp
 // Oops! The destination name is empty

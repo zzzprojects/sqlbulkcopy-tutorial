@@ -4,7 +4,7 @@
 
 You execute the method WriteToServer, and the following error is thrown:
 
-> Value cannot be null.'
+> Value cannot be null.
 
 ```csharp
 // Oops! The destination name is null

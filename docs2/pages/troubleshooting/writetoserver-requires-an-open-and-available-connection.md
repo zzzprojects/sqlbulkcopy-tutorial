@@ -4,7 +4,7 @@
 
 You execute the method WriteToServer, and the following error is thrown:
 
-> WriteToServer requires an open and available Connection. The connection\'s current state is closed.'
+> WriteToServer requires an open and available Connection. The connection\'s current state is closed.
 
 ```csharp
 using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperations))

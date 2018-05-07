@@ -4,7 +4,7 @@
 
 You execute the method WriteToServer, and the following error is thrown:
 
-> The given value of type String from the data source cannot be converted to type int of the specified target column.'
+> The given value of type String from the data source cannot be converted to type int of the specified target column.
 
 ```csharp
 var dt = new DataTable();

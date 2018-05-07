@@ -1,19 +1,12 @@
----
-layout: default
-title: SqlBulkCopy - The given value of type String from the data source cannot be converted to type int of the specified target column.
-permalink: type-a-cannot-be-converted-to-type-b
----
-
-{% include template-h1.html %}
+# SqlBulkCopy - The given value of type String from the data source cannot be converted to type int of the specified target column.
 
 ## Problem
 
-{% include template-execute-thrown.html methodName='WriteToServer' %}
+You execute the method WriteToServer, and the following error is thrown:
 
-{% include template-exception.html message='The given value of type String from the data source cannot be converted to type int of the specified target column.' %}
+> The given value of type String from the data source cannot be converted to type int of the specified target column.'
 
-{% include template-example.html %} 
-{% highlight csharp %}
+```csharp
 var dt = new DataTable();
 dt.Columns.Add("TheColumnInt");
 dt.Columns.Add("TheColumnString");
@@ -38,7 +31,7 @@ using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperat
         bulkCopy.WriteToServer(dt);
     }
 }
-{% endhighlight %}
+```
 
 ## Solution
 
@@ -52,8 +45,8 @@ using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperat
 - CREATE column by specifying the type to get the error before executing WriteToServer method.
 
 ### Example
-{% highlight csharp %}
+```csharp
 var dt = new DataTable();
 dt.Columns.Add("TheColumnInt", typeof(int));
 dt.Columns.Add("TheColumnString", typeof(string));
-{% endhighlight %}
+```

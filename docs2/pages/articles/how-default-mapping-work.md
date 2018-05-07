@@ -1,10 +1,4 @@
----
-layout: default
-title: SqlBulkCopy - How the default mapping work
-permalink: how-default-mapping-work
----
-
-{% include template-h1.html %}
+# SqlBulkCopy - How the default mapping work
 
 ## Description
 Hey SqlBulkCopy can map column automaticality, it's not is great?
@@ -17,12 +11,12 @@ At first sight yes, but once you understand how it works, you will always map al
 Let use,
 
 The following DataTable to map
-{% highlight csharp %}
+```csharp
 var dt = new DataTable();
 dt.Columns.Add("SourceOrderId", typeof(int));
 dt.Columns.Add("SourceTransactionId", typeof(int));
 dt.Columns.Add("SourceCustomerId", typeof(int));
-{% endhighlight %}
+```
 
 to the following SQL table:
 {% highlight sql %}
@@ -34,7 +28,7 @@ CREATE TABLE DestinationOrder
     DestinationDateCreated DATETIME2,
     DestinationInvoiceId INT
 )
-{% endhighlight %}
+```
 
 ### Problem
 
@@ -46,13 +40,13 @@ Let say we want to insert only the following column:
 #### Step 1
 The first step of the default mapping is simply performing an auto-mapping by ordinal:
 
-{% highlight csharp %}
+```csharp
 internal void CreateDefaultMapping(int columnCount)
 {
   for (int index = 0; index < columnCount; ++index)
     this.InnerList.Add((object) new SqlBulkCopyColumnMapping(index, index));
 }
-{% endhighlight %}
+```
 
 The maping become:
 

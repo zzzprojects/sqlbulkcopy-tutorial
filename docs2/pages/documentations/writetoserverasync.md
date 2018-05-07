@@ -1,17 +1,10 @@
----
-layout: default
-title: SqlBulkCopy WriteToServerAsync
-permalink: writetoserverasync
----
-
-{% include template-h1.html %}
+# SqlBulkCopy - WriteToServerAsync
 
 ## Description
 
 The asynchronous version of WriteToServer. Copy all rows from the source to the destination table.
 
-{% include template-example.html %} 
-{% highlight csharp %}
+```csharp
 using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString))
 {
     bulkCopy.DestinationTableName = "TheDestinationTable";
@@ -19,4 +12,4 @@ using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString))
     // CALL WriteToServerAsync method.
     bulkCopy.WriteToServerAsync(dt, cancellationToken);
 }
-{% endhighlight %}
+```

@@ -1,19 +1,12 @@
----
-layout: default
-title: SqlBulkCopy - Execution Timeout Expired. The timeout period elapsed prior to completion of the operation or the server is not responding.
-permalink: timeout-expired
----
-
-{% include template-h1.html %}
+# SqlBulkCopy - Execution Timeout Expired. The timeout period elapsed prior to completion of the operation or the server is not responding.
 
 ## Problem
 
-{% include template-execute-thrown.html methodName='WriteToServer' %}
+You execute the method WriteToServer, and the following error is thrown:
 
-{% include template-exception.html message='Execution Timeout Expired. The timeout period elapsed prior to completion of the operation or the server is not responding.' %}
+> Execution Timeout Expired. The timeout period elapsed prior to completion of the operation or the server is not responding.'
 
-{% include template-example.html %} 
-{% highlight csharp %}
+```csharp
 // Oops! The specified bulkCopyTimeout value is to low!
 bulkCopyTimeout = 1;
 
@@ -30,7 +23,7 @@ using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperat
         bulkCopy.WriteToServer(dt);
     }
 }
-{% endhighlight %}
+```
 
 ## Solution
 

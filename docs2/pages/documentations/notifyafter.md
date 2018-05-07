@@ -1,20 +1,12 @@
----
-layout: default
-title: SqlBulkCopy NotifyAfter
-permalink: notifyafter
----
-
-{% include template-h1.html %}
+# SqlBulkCopy - NotifyAfter
 
 ## Description
-
 Number of rows to process before raising the SqlRowsCopied events.
 
 - Type: System.Int32
 - Default Value: 0 (None)
 
-{% include template-example.html %} 
-{% highlight csharp %}
+```csharp
 using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString))
 {
     // SET NotifyAfter value.
@@ -25,4 +17,4 @@ using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString))
     bulkCopy.DestinationTableName = "TheDestinationTable";
     bulkCopy.WriteToServer(reader);
 }
-{% endhighlight %}
+```

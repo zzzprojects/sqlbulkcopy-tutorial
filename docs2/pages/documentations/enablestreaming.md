@@ -1,21 +1,14 @@
----
-layout: default
-title: SqlBulkCopy EnableStreaming
-permalink: enablestreaming
----
-
-{% include template-h1.html %}
+# SqlBulkCopy - EnableStreaming
 
 ## Description
-
 True to enable streaming for IDataReader object.
 
 - Type: System.Boolean
 - Default Value: false
 
 ## Example
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString))
 {
     // SET EnableStreaming value.
@@ -24,4 +17,4 @@ using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString))
     bulkCopy.DestinationTableName = "TheDestinationTable";
     bulkCopy.WriteToServer(reader);
 }
-{% endhighlight %}
+```

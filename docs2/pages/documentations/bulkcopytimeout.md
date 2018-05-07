@@ -1,10 +1,4 @@
----
-layout: default
-title: SqlBulkCopy BulkCopyTimeout
-permalink: bulkcopytimeout
----
-
-{% include template-h1.html %}
+# SqlBulkCopy - BulkCopyTimeout
 
 ## Description
 
@@ -14,8 +8,7 @@ Number of seconds maximum for a batch before it times out.
 - Default Value: 30 
 - Note: A value of 0 indicates the SqlBulkCopy can wait forever
 
-{% include template-example.html %} 
-{% highlight csharp %}
+```csharp
 using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString))
 {
     // SET BulkCopyTimeout value.
@@ -24,7 +17,7 @@ using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString))
     bulkCopy.DestinationTableName = "TheDestinationTable";
     bulkCopy.WriteToServer(dt);
 }
-{% endhighlight %}
+```
 
 ## Recommendation
 - Higher is better!

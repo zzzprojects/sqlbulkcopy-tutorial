@@ -1,19 +1,12 @@
----
-layout: default
-title: SqlBulkCopy - The DestinationTableName property must be set before calling this method.
-permalink: the-destinationtablename-property-must-be-set-before-calling-this-method
----
-
-{% include template-h1.html %}
+# SqlBulkCopy - The DestinationTableName property must be set before calling this method.
 
 ## Problem
 
-{% include template-execute-thrown.html methodName='WriteToServer' %}
+You execute the method WriteToServer, and the following error is thrown:
 
-{% include template-exception.html message='The DestinationTableName property must be set before calling this method.' %}
+> The DestinationTableName property must be set before calling this method.'
 
-{% include template-example.html %} 
-{% highlight csharp %}
+```csharp
 // Oops! The destination name is empty
 string destinationName = "";
 
@@ -27,7 +20,7 @@ using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperat
         bulkCopy.WriteToServer(dt);
     }
 }
-{% endhighlight %}
+```
 
 ## Solution
 

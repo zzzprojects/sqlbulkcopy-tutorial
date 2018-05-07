@@ -1,19 +1,12 @@
----
-layout: default
-title: SqlBulkCopy - Value cannot be null.
-permalink: value-cannot-be-null
----
-
-{% include template-h1.html %}
+# SqlBulkCopy - Value cannot be null.
 
 ## Problem
 
-{% include template-execute-thrown.html methodName='WriteToServer' %}
+You execute the method WriteToServer, and the following error is thrown:
 
-{% include template-exception.html message='Value cannot be null.' %}
+> Value cannot be null.'
 
-{% include template-example.html %} 
-{% highlight csharp %}
+```csharp
 // Oops! The destination name is null
 string destinationName = null;
 
@@ -27,7 +20,7 @@ using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperat
         bulkCopy.WriteToServer(dt);
     }
 }
-{% endhighlight %}
+```
 
 ## Solution
 

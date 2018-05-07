@@ -1,8 +1,4 @@
----
-layout: default
-title: SqlBulkCopy - Recommended SqlBulkCopyOptions
-permalink: recommended-sqlbulkcopyoptions
----
+# SqlBulkCopy - Recommended SqlBulkCopyOptions
 
 ## Question
 
@@ -15,10 +11,10 @@ For common scenario:
 - CheckConstraints
 - FireTrigger
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 var options = SqlBulkCopyOptions.CheckConstraints | SqlBulkCopyOptions.FireTriggers | SqlBulkCopyOptions.TableLock;
-{% endhighlight %}
+```
 
 By default, all options are turned off which is very bad.
 

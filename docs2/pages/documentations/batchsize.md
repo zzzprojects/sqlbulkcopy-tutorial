@@ -1,10 +1,4 @@
----
-layout: default
-title: SqlBulkCopy BatchSize
-permalink: batchsize
----
-
-{% include template-h1.html %}
+# SqlBulkCopy - BatchSize
 
 ## Description
 Number of rows for a batch.
@@ -12,8 +6,7 @@ Number of rows for a batch.
 - Type: System.Int32
 - Default Value: 0 _(Unlimited)_
 
-{% include template-example.html %} 
-{% highlight csharp %}
+```csharp
 using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString, transaction))
 {
     // SET BatchSize value.
@@ -22,7 +15,7 @@ using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString, transaction))
     bulkCopy.DestinationTableName = "TheDestinationTable";
     bulkCopy.WriteToServer(dt);
 }
-{% endhighlight %}
+```
 
 ## Recommendation
 - SET a BatchSize value
@@ -30,12 +23,11 @@ using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString, transaction))
 
 ### SET a BatchSize value
 
- - Recommended BatchSize Value: **4000**
+- Recommended BatchSize Value: **4000**
  
-{% include template-example.html %} 
-{% highlight csharp %}
+```csharp
 bulkCopy.BatchSize = 4000;
-{% endhighlight %}
+```
 
 By default, SqlBulkCopy will process the operation in a single batch. If you have 100000 rows to copy, 100000 rows will be copied at once.
 
@@ -58,14 +50,12 @@ There is no value that fit all scenarios. Some people will recommend a BatchSize
 
 - We recommend to use your transaction
 
-{% include template-example.html %} 
-{% highlight csharp %}
+```csharp
 using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString, transaction))
 {
    // ...code...
 }
-{% endhighlight %}
-
+```
 
 By default, SqlBulkCopy do not use a transaction. So if a batch fail, there is no rollback of all rows already processed from previous batch.
 

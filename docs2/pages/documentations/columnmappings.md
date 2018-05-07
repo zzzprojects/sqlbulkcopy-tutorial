@@ -1,17 +1,10 @@
----
-layout: default
-title: SqlBulkCopy ColumnMappings
-permalink: columnmappings
----
-
-{% include template-h1.html %}
+# SqlBulkCopy - ColumnMappings
 
 ## Description
 
 Mapping between the source and destination columns.
 
-{% include template-example.html %} 
-{% highlight csharp %}
+```csharp
 using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString))
 {
     // SET ColumnMappings values.
@@ -21,7 +14,7 @@ using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString))
     bulkCopy.DestinationTableName = "TheDestinationTable";
     bulkCopy.WriteToServer(dt);
 }
-{% endhighlight %}
+```
 
 ## Recommendation
 - Always map column explicitly

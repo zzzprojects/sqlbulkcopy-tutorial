@@ -1,18 +1,11 @@
----
-layout: default
-title: SqlBulkCopy SqlRowCopied
-permalink: sqlrowscopied
----
-
-{% include template-h1.html %}
-
+# SqlBulkCopy - SqlRowCopied
 
 ## Description
 Even raised after the number of row in the NotifyAfter has been processed.
 
 ## Example
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString))
 {
     // SET SqlRowsCopied event.
@@ -23,4 +16,4 @@ using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString))
     bulkCopy.DestinationTableName = "TheDestinationTable";
     bulkCopy.WriteToServer(reader);
 }
-{% endhighlight %}
+```

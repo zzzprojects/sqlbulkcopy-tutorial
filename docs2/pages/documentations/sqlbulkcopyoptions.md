@@ -1,23 +1,16 @@
----
-layout: default
-title: SqlBulkCopy - SqlBulkCopyOptions
-permalink: sqlbulkcopyoptions
----
-
-{% include template-h1.html %}
+# SqlBulkCopy - SqlBulkCopyOptions
 
 ## Description
 Bitwise flag to specifies one or more options.
 
-{% include template-example.html %} 
-{% highlight csharp %}
+```csharp
 // SET SqlBulkCopyOptions value.
 using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString, SqlBulkCopyOptions.CheckConstraints | SqlBulkCopyOptions.FireTriggers))
 {
 	bulkCopy.DestinationTableName = "TheDestinationTable";
 	bulkCopy.WriteToServer(dt);
 }
-{% endhighlight %}
+```
 
 ## Options
 
@@ -35,10 +28,9 @@ using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString, SqlBulkCopyOptio
 ## Remarks
 You can specify more than one value by using the "|" operators (Logical OR).
 
-{% include template-example.html %} 
-{% highlight csharp %}
+```csharp
 var options = SqlBulkCopyOptions.CheckConstraints | SqlBulkCopyOptions.FireTriggers | SqlBulkCopyOptions.TableLock;
-{% endhighlight %}
+```
 
 ## Recommendation
 - SET CheckConstraints ON

@@ -1,19 +1,12 @@
----
-layout: default
-title: SqlBulkCopy - Cannot access destination table '[TheInvalidTableName]'.
-permalink: cannot-access-destination-table
----
-
-{% include template-h1.html %}
+# SqlBulkCopy - Cannot access destination table '[TheInvalidTableName]'.
 
 ## Problem
 
-{% include template-execute-thrown.html methodName='WriteToServer' %}
+You execute the method WriteToServer, and the following error is thrown:
 
-{% include template-exception.html message='Cannot access destination table \'[TheInvalidTableName]\'.' %}
+> Cannot access destination table '[TheInvalidTableName]'.
 
-{% include template-example.html %}
-{% highlight csharp %}
+```csharp
 // Oops! The table name is invalid
 string destinationName = "[TheInvalidTableName]";
 
@@ -27,7 +20,7 @@ using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperat
         bulkCopy.WriteToServer(dt);
     }
 }
-{% endhighlight %}
+```
 
 ## Solution
 

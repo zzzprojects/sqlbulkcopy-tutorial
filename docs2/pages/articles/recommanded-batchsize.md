@@ -1,10 +1,4 @@
----
-layout: default
-title: SqlBulkCopy - Recommended BatchSize
-permalink: recommended-batchsize
----
-
-{% include template-h1.html %}
+# SqlBulkCopy - Recommended BatchSize
 
 ## Question
 What's the recommended batch size?
@@ -38,4 +32,3 @@ The best recommendation you can get is to choose a value within your company and
 In this article, the XYZ recommended value without a doubt followed the "NOT too high, NOT too low" rule.
 
 So yes, this is also an excellent recommended value!
-

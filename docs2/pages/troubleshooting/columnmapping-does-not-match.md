@@ -1,19 +1,12 @@
----
-layout: default
-title: SqlBulkCopy - The given ColumnMapping does not match up with any column in the source or destination.
-permalink: columnmapping-does-not-match
----
-
-{% include template-h1.html %}
+# SqlBulkCopy - The given ColumnMapping does not match up with any column in the source or destination.
 
 ## Problem
 
-{% include template-execute-thrown.html methodName='WriteToServer' %}
+You execute the method WriteToServer, and the following error is thrown:
 
-{% include template-exception.html message='The given ColumnMapping does not match up with any column in the source or destination.' %}
+The given ColumnMapping does not match up with any column in the source or destination.
 
-{% include template-example.html %}
-{% highlight csharp %}
+```csharp
 using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperations))
 {
     connection.Open();
@@ -29,7 +22,7 @@ using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperat
         bulkCopy.WriteToServer(dt);
     }
 }
-{% endhighlight %}
+```
 
 ## Solution
 
@@ -49,11 +42,11 @@ using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperat
 > You cannot make the destination column name case insensitive.
 
 {% include template-example.html title="Example - MAKE the source case insensitive" %}
-{% highlight csharp %}
+```csharp
 var dt = new DataTable();
 dt.CaseSensitive = false;
 dt.Columns.Add("TheColumnInt", typeof(int));
 dt.Columns.Add("TheColumnString");
-{% endhighlight %}
+```
 
 

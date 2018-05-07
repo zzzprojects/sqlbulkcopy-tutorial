@@ -1,19 +1,12 @@
----
-layout: default
-title: SqlBulkCopy - WriteToServer requires an open and available Connection. The connection's current state is closed.
-permalink: writetoserver-requires-an-open-and-available-connection
----
-
-{% include template-h1.html %}
+# SqlBulkCopy - WriteToServer requires an open and available Connection. The connection's current state is closed.
 
 ## Problem
 
-{% include template-execute-thrown.html methodName='WriteToServer' %}
+You execute the method WriteToServer, and the following error is thrown:
 
-{% include template-exception.html message='WriteToServer requires an open and available Connection. The connection\'s current state is closed.' %}
+> WriteToServer requires an open and available Connection. The connection\'s current state is closed.'
 
-{% include template-example.html %} 
-{% highlight csharp %}
+```csharp
 using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperations))
 {
     // Oops! The connection has never been opened
@@ -26,10 +19,10 @@ using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperat
         bulkCopy.WriteToServer(dt);
     }
 }
-{% endhighlight %}
+```
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperations))
 {
     // Oops! The connection has never been opened
@@ -46,7 +39,7 @@ using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperat
         }
     }
 }
-{% endhighlight %}
+```
 
 ## Solution
 

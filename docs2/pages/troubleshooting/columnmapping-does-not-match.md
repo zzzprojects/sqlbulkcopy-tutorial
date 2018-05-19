@@ -28,7 +28,7 @@ using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperat
 
 ### Cause
 
-- You didn’t provide any ColumnMappings, and there is more column in the source than in the destination.
+- You didn't provide any ColumnMappings, and there is more column in the source than in the destination.
 - You provided an invalid column name for the source.
 - You provided an invalid column name for the destination.
 
@@ -42,6 +42,7 @@ using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperat
 > You cannot make the destination column name case insensitive.
 
 {% include template-example.html title="Example - MAKE the source case insensitive" %}
+
 ```csharp
 var dt = new DataTable();
 dt.CaseSensitive = false;

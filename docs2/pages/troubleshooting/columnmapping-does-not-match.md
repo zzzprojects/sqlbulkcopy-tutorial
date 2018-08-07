@@ -41,7 +41,7 @@ using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperat
 
 > You cannot make the destination column name case insensitive.
 
-{% include template-example.html title="Example - MAKE the source case insensitive" %}
+### Example - MAKE the source case insensitive
 
 ```csharp
 var dt = new DataTable();

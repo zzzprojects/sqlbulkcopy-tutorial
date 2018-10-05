@@ -33,6 +33,12 @@ You can specify more than one value by using the "|" operators (Logical OR).
 
 ```csharp
 var options = SqlBulkCopyOptions.CheckConstraints | SqlBulkCopyOptions.FireTriggers | SqlBulkCopyOptions.TableLock;
+
+using (var sqlBulk = new SqlBulkCopy(connectionString, options))
+{
+    sqlBulk.DestinationTableName = "Customers";
+    sqlBulk.WriteToServer(dt);
+}
 ```
 
 [Try it](https://dotnetfiddle.net/lWfHtH)
@@ -44,9 +50,9 @@ var options = SqlBulkCopyOptions.CheckConstraints | SqlBulkCopyOptions.FireTrigg
 ### SET CheckConstraints ON
 By default, SqlBulkCopy doesn't check constraint.
 
-It's recommanded to always check constraint even if your table have currently none.
+It's recommended to always check constraint even if your table has none currently.
 
 ### SET FireTriggers ON
 By default, SqlBulkCopy doesn't check trigger.
 
-It's recommanded to always fire trigger even if your table have currently none.
+It's recommended to always fire trigger even if your table has none currently.

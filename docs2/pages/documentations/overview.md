@@ -10,6 +10,7 @@ In most of the cases, we need to insert a large number of records into one or mo
 
 ## SqlBulkCopy
 
+The `SqlBulkCopy` class helps us transfer data from one data source to another, whether on a single server or between servers. 
 
  - There are other ways to load data into a SQL Server table such as `INSERT` statements, but SqlBulkCopy offers a significant performance advantage over them.
  - We can transfer the data with high performance to SQL Server using `SQLBulkCopy.WriteToServer()` method.

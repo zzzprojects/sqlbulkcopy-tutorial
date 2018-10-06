@@ -1,21 +1,25 @@
 # SqlBulkCopy - BatchSize
 
 ## Description
-Number of rows for a batch.
+The number of rows for a batch sent to the server.
 
 - Type: System.Int32
 - Default Value: 0 _(Unlimited)_
+
+The following example shows how to bulk load data in batches of 50 rows. 
 
 ```csharp
 using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString, transaction))
 {
     // SET BatchSize value.
-    bulkCopy.BatchSize = 4000;
+    bulkCopy.BatchSize = 50;
 
     bulkCopy.DestinationTableName = "TheDestinationTable";
     bulkCopy.WriteToServer(dt);
 }
 ```
+
+[Try it](https://dotnetfiddle.net/IHPfoI)
 
 ## Recommendation
 - SET a BatchSize value
@@ -51,13 +55,22 @@ There is no value that fit all scenarios. Some people will recommend a BatchSize
 - We recommend to use your transaction
 
 ```csharp
-using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString, transaction))
+var transaction = connection.BeginTransaction();
+using (var sqlBulk = new SqlBulkCopy(connection, SqlBulkCopyOptions.Default, transaction))
 {
-   // ...code...
+    // SET BatchSize value.
+    sqlBulk.BatchSize = 4000;
+
+    sqlBulk.DestinationTableName = "Customers";
+    sqlBulk.WriteToServer(dt);
+	
+    transaction.Commit();
 }
 ```
 
-By default, SqlBulkCopy do not use a transaction. So if a batch fail, there is no rollback of all rows already processed from previous batch.
+[Try it](https://dotnetfiddle.net/skbz96)
+
+By default, `SqlBulkCopy` do not use a transaction. So if a batch fail, there is no rollback of all rows already processed from previous batch.
 
 If you set the UseInternalTransaction option to true, a transaction will be created for every batch. Again, if a batch fail, there is no rollback of all rows already processed from previous batch.
 

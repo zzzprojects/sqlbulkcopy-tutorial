@@ -7,19 +7,21 @@ You execute the method WriteToServer, and the following error is thrown:
 > The DestinationTableName property must be set before calling this method.
 
 ```csharp
+// Oops! The destination name is empty
+string destinationName = "";
+
 using(var connection = new SqlConnection(FiddleHelper.GetConnectionStringSqlServer()))
 {
     connection.Open();
     using (var sqlBulk = new SqlBulkCopy(connection))
     {
-        // Oops! The destination name is Customer instead of Customers 		
-        sqlBulk.DestinationTableName = "Customer";
+        sqlBulk.DestinationTableName = destinationName;
         sqlBulk.WriteToServer(dt);
     }
 }
 ```
 
-[Try it](https://dotnetfiddle.net/Fmso3s)
+[Try it](https://dotnetfiddle.net/6H5MhC)
 
 ## Solution
 
@@ -34,15 +36,17 @@ using(var connection = new SqlConnection(FiddleHelper.GetConnectionStringSqlServ
 - ENSURE the value you provided is not empty.
 
 ```csharp
+string destinationName = "Customers";
+
 using(var connection = new SqlConnection(FiddleHelper.GetConnectionStringSqlServer()))
 {
     connection.Open();
     using (var sqlBulk = new SqlBulkCopy(connection))
-    {		
-        sqlBulk.DestinationTableName = "Customer";
+    {
+        sqlBulk.DestinationTableName = destinationName;
         sqlBulk.WriteToServer(dt);
     }
 }
 ```
 
-[Try it](https://dotnetfiddle.net/S7HL4P)
+[Try it](https://dotnetfiddle.net/lAbVe0)

@@ -7,20 +7,19 @@ You execute the method WriteToServer, and the following error is thrown:
 > Cannot access destination table '[TheInvalidTableName]'.
 
 ```csharp
-// Oops! The table name is invalid
-string destinationName = "[TheInvalidTableName]";
-
-using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperations))
+using(var connection = new SqlConnection(FiddleHelper.GetConnectionStringSqlServer()))
 {
     connection.Open();
-
-    using (var bulkCopy = new SqlBulkCopy(connection))
+    using (var sqlBulk = new SqlBulkCopy(connection))
     {
-        bulkCopy.DestinationTableName = destinationName;
-        bulkCopy.WriteToServer(dt);
+        // Oops! The destination name is Customer instead of Customers 		
+        sqlBulk.DestinationTableName = "Customer";
+        sqlBulk.WriteToServer(dt);
     }
 }
 ```
+
+[Try it](https://dotnetfiddle.net/Fmso3s)
 
 ## Solution
 
@@ -35,6 +34,20 @@ using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperat
 
 - ENSURE the schema name is valid.
 - ENSURE the table name is valid.
+
+```csharp
+using(var connection = new SqlConnection(FiddleHelper.GetConnectionStringSqlServer()))
+{
+    connection.Open();
+    using (var sqlBulk = new SqlBulkCopy(connection))
+    {		
+        sqlBulk.DestinationTableName = "Customers";
+        sqlBulk.WriteToServer(dt);
+    }
+}
+```
+
+[Try it](https://dotnetfiddle.net/S7HL4P)
 
 If the schema and table name was already valid:
 

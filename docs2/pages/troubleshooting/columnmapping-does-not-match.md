@@ -53,6 +53,19 @@ using (var sqlBulk = new SqlBulkCopy(connection))
 }
 ```
 
+```csharp
+using (var sqlBulk = new SqlBulkCopy(connection))
+{
+    // SET ColumnMappings values.
+    sqlBulk.ColumnMappings.Add("Name", "Name");
+    sqlBulk.ColumnMappings.Add("Country", "Country");
+    sqlBulk.ColumnMappings.Add("City", "City");
+    
+    sqlBulk.DestinationTableName = "Customers";
+    sqlBulk.WriteToServer(dt);
+}
+```
+
 [Try it](https://dotnetfiddle.net/Zry2tb)
 
 > You cannot make the destination column name case insensitive.
@@ -63,4 +76,3 @@ dt.CaseSensitive = false;
 dt.Columns.Add("TheColumnInt", typeof(int));
 dt.Columns.Add("TheColumnString");
 ```
-

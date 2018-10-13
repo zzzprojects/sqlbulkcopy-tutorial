@@ -9,15 +9,17 @@ Number of seconds maximum for a batch before it times out.
 - Note: A value of 0 indicates the SqlBulkCopy can wait forever
 
 ```csharp
-using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString))
+using (var sqlBulk = new SqlBulkCopy(connection))
 {
     // SET BulkCopyTimeout value.
-    bulkCopy.BulkCopyTimeout = 300;
-
-    bulkCopy.DestinationTableName = "TheDestinationTable";
-    bulkCopy.WriteToServer(dt);
+    sqlBulk.BulkCopyTimeout = 300;
+    
+    sqlBulk.DestinationTableName = "Customers";
+    sqlBulk.WriteToServer(dt);
 }
 ```
+
+[Try it](https://dotnetfiddle.net/7vyG79)
 
 ## Recommendation
 - Higher is better!
@@ -29,4 +31,4 @@ Ensure to set the BulkCopyTimeout to at least 3x of the time the SqlBulkCopy nee
 
 If the operation may take up to 20s, specify a value of at least of 60s.
 
-You don't know in one year what could happen! A file importation that started small may have growth to millions of rows. There is nothing worse than an application crashing in production because of a Timeout exception occured!
+You don't know in one year what could happen! A file importation that started small may have grown to millions of rows. There is nothing worse than an application crashing in production because of a Timeout exception occurred!

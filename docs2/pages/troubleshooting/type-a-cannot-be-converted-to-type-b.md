@@ -8,30 +8,28 @@ You execute the method WriteToServer, and the following error is thrown:
 
 ```csharp
 var dt = new DataTable();
-dt.Columns.Add("TheColumnInt");
-dt.Columns.Add("TheColumnString");
-
-for (int i = 0; i < 100; i++)
+dt.Columns.Add("CustomerID", typeof(int));
+dt.Columns.Add("Name");
+dt.Columns.Add("Age");
+			   
+for(int i = 0; i < 1000; i++)
 {
-    // Oops! The value added for "TheColumnInt" is empty
-    dt.Rows.Add("", i);
-}
+    dt.Rows.Add(i, "Name_" + i, "");
+}	
 
-using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperations))
+using(var connection = new SqlConnection(FiddleHelper.GetConnectionStringSqlServer()))
 {
     connection.Open();
-
-    using (var bulkCopy = new SqlBulkCopy(connection))
-    {
-        bulkCopy.ColumnMappings.Add("TheColumnInt", "TheColumnInt");
-        bulkCopy.ColumnMappings.Add("TheColumnString", "TheColumnString");
-
-        bulkCopy.BatchSize = 4000;
-        bulkCopy.DestinationTableName = "TheDestinationTable";
-        bulkCopy.WriteToServer(dt);
+    
+    using (var sqlBulk = new SqlBulkCopy(connection))
+    {		
+        sqlBulk.DestinationTableName = "Customers";
+        sqlBulk.WriteToServer(dt);
     }
 }
 ```
+
+[Try it](https://dotnetfiddle.net/T2EQIb)
 
 ## Solution
 
@@ -45,8 +43,29 @@ using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperat
 - CREATE column by specifying the type to get the error before executing WriteToServer method.
 
 ### Example
+
 ```csharp
 var dt = new DataTable();
-dt.Columns.Add("TheColumnInt", typeof(int));
-dt.Columns.Add("TheColumnString", typeof(string));
+dt.Columns.Add("CustomerID", typeof(int));
+dt.Columns.Add("Name", typeof(string));
+dt.Columns.Add("Age", typeof(int));
+			   
+for(int i = 0; i < 1000; i++)
+{
+    dt.Rows.Add(i, "Name_" + i, i);
+}	
+
+using(var connection = new SqlConnection(FiddleHelper.GetConnectionStringSqlServer()))
+{
+    // Make sure that connection is open
+    connection.Open();
+    
+    using (var sqlBulk = new SqlBulkCopy(connection))
+    {		
+        sqlBulk.DestinationTableName = "Customers";
+        sqlBulk.WriteToServer(dt);
+    }
+}
 ```
+
+[Try it](https://dotnetfiddle.net/fkyMNz)

@@ -10,17 +10,18 @@ You execute the method WriteToServer, and the following error is thrown:
 // Oops! The destination name is empty
 string destinationName = "";
 
-using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperations))
+using(var connection = new SqlConnection(FiddleHelper.GetConnectionStringSqlServer()))
 {
     connection.Open();
-
-    using (var bulkCopy = new SqlBulkCopy(connection))
+    using (var sqlBulk = new SqlBulkCopy(connection))
     {
-        bulkCopy.DestinationTableName = destinationName;
-        bulkCopy.WriteToServer(dt);
+        sqlBulk.DestinationTableName = destinationName;
+        sqlBulk.WriteToServer(dt);
     }
 }
 ```
+
+[Try it](https://dotnetfiddle.net/6H5MhC)
 
 ## Solution
 
@@ -33,3 +34,19 @@ using (var connection = new SqlConnection(My.Config.ConnectionStrings.BulkOperat
 
 - ENSURE you provide value to the DestinationTableName property.
 - ENSURE the value you provided is not empty.
+
+```csharp
+string destinationName = "Customers";
+
+using(var connection = new SqlConnection(FiddleHelper.GetConnectionStringSqlServer()))
+{
+    connection.Open();
+    using (var sqlBulk = new SqlBulkCopy(connection))
+    {
+        sqlBulk.DestinationTableName = destinationName;
+        sqlBulk.WriteToServer(dt);
+    }
+}
+```
+
+[Try it](https://dotnetfiddle.net/lAbVe0)

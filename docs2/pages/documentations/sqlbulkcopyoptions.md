@@ -5,12 +5,14 @@ Bitwise flag to specifies one or more options.
 
 ```csharp
 // SET SqlBulkCopyOptions value.
-using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString, SqlBulkCopyOptions.CheckConstraints | SqlBulkCopyOptions.FireTriggers))
+using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString, SqlBulkCopyOptions.CheckConstraints))
 {
 	bulkCopy.DestinationTableName = "TheDestinationTable";
 	bulkCopy.WriteToServer(dt);
 }
 ```
+
+[Try it](https://dotnetfiddle.net/ng64Z4)
 
 ## Options
 
@@ -26,11 +28,20 @@ using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString, SqlBulkCopyOptio
 | UseInternalTransaction | No | When specified, each batch of the bulk-copy operation will occur within a transaction. |
 
 ## Remarks
+
 You can specify more than one value by using the "|" operators (Logical OR).
 
 ```csharp
 var options = SqlBulkCopyOptions.CheckConstraints | SqlBulkCopyOptions.FireTriggers | SqlBulkCopyOptions.TableLock;
+
+using (var sqlBulk = new SqlBulkCopy(connectionString, options))
+{
+    sqlBulk.DestinationTableName = "Customers";
+    sqlBulk.WriteToServer(dt);
+}
 ```
+
+[Try it](https://dotnetfiddle.net/lWfHtH)
 
 ## Recommendation
 - SET CheckConstraints ON
@@ -39,9 +50,9 @@ var options = SqlBulkCopyOptions.CheckConstraints | SqlBulkCopyOptions.FireTrigg
 ### SET CheckConstraints ON
 By default, SqlBulkCopy doesn't check constraint.
 
-It's recommanded to always check constraint even if your table have currently none.
+It's recommended to always check constraint even if your table has none currently.
 
 ### SET FireTriggers ON
 By default, SqlBulkCopy doesn't check trigger.
 
-It's recommanded to always fire trigger even if your table have currently none.
+It's recommended to always fire trigger even if your table has none currently.

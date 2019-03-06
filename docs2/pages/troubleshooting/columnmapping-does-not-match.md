@@ -23,7 +23,9 @@ using(var connection = new SqlConnection(FiddleHelper.GetConnectionStringSqlServ
 }
 ```
 
-[Try it](https://dotnetfiddle.net/Y7K9Fw)
+[Try it (Invalid name)](https://dotnetfiddle.net/Y7K9Fw)
+
+[Try it (More column in the source)](https://dotnetfiddle.net/WaeUi9)
 
 ## Solution
 
